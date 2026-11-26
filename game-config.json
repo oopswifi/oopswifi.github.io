@@ -13,5 +13,8 @@
     "PAYPAL *"
   ],
   "contactEmail": "icodewoods@gmail.com",
-  "contactUrl": "https://github.com/oopswifi/oopswifi.github.io/issues"
+  "contactUrl": "https://github.com/oopswifi/oopswifi.github.io/issues",
+  "analytics": {
+    "websiteId": "0be078b4-5724-40d2-b13c-160a5840fa8a"
+  }
 }
