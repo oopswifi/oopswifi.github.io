@@ -1,0 +1,16 @@
+{
+  "storeUrl": "https://payhip.com/b/XiZc4",
+  "storeName": "Payhip",
+  "price": "约 ¥7",
+  "priceUsd": "1",
+  "payNote": "按美元结算 US$1。中国大陆可以用微信支付，也支持 PayPal 和 Visa、Mastercard 等境外银行卡。付款后，激活码会显示在付款完成页，同时发到你的邮箱。",
+  "seller": "iCodeWoods",
+  "sellerUrl": "https://github.com/963239327",
+  "statementName": "ICODEWOODS",
+  "statementPrefixes": [
+    "PAYHIP*",
+    "PAYPAL *"
+  ],
+  "contactEmail": "icodewoods@gmail.com",
+  "contactUrl": "https://github.com/oopswifi/oopswifi.github.io/issues"
+}
