@@ -1,0 +1,29 @@
+{
+  "name": "糟了！我只是来恋综修网线的",
+  "short_name": "修网线",
+  "description": "被裁员的程序员去恋综片场修网线，结果被总导演抓去当男嘉宾。第一人称真人风互动恋爱喜剧：5 位女嘉宾、限时抉择、28 个结局和一条隐藏路线。序章和第一集免费，浏览器打开就能玩。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#14151f",
+  "theme_color": "#14151f",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
