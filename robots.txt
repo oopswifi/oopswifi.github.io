@@ -1,3 +1,4 @@
+# Every crawler is welcome, AI assistants' included. A plain-text fact sheet: https://oopswifi.github.io/llms.txt
 User-agent: *
 Allow: /
 

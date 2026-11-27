@@ -38,14 +38,18 @@
   .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
   figure { margin: 0; } figure img { width: 100%; border-radius: 8px; display: block; } figcaption { font-size: 13px; color: #adb5bd; }
   .downloads a { display: inline-block; margin: 4px 12px 4px 0; }
+  pre { margin: 8px 0 14px; padding: 12px 14px; border-radius: 8px; background: #0b0c13; color: #ced4da; font-size: 13px; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+  .embed-demo { max-width: 640px; margin: 8px 0 16px; }
+  .embed-demo iframe { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 8px; }
 </style>
 </head>
 <body>
 <main>
   <h1>糟了！我只是来恋综修网线的<small>Oops! I&#39;m Just Here to Fix the Wi-Fi · 媒体与主播资料 / Press &amp; streamer kit</small></h1>
-  <p>被裁员的程序员去恋综片场修网线，结果男嘉宾连夜跑路，总导演把他抓去顶班。浏览器打开就能玩，序章和第一集免费，一局大约 15 分钟。<br>
-  <span lang="en">A laid-off programmer comes to fix the Wi-Fi on a dating show and gets cast as its male contestant. Plays in the browser; the prologue and episode 1 are free (about 15 minutes).</span></p>
-  <p><a href="./">▶ 免费试玩 Play the free demo</a> · <a href="./about.html">关于与购买 About</a></p>
+  <p>《糟了！我只是来恋综修网线的》（Oops! I&#39;m Just Here to Fix the Wi-Fi）是独立开发者 iCodeWoods 制作的网页互动恋爱喜剧（视觉小说），在手机或电脑的浏览器里直接玩，不用下载，也不用注册。被裁员的程序员去恋综片场修网线，结果被总导演抓去当了男嘉宾：5 位女嘉宾和一条隐藏路线，限时抉择，28 个结局。序章和第一集免费试玩；完整版激活码：约 ¥7（US$1），一次性购买（Payhip）。画面由 AI 生成，剧情和代码由开发者借助 AI 助手写成；所有角色均为成年人，本作含暧昧和亲密情节（泳装、吻戏），无裸露。网址：https://oopswifi.github.io/<br>
+  <span lang="en">Oops! I&#39;m Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) is a Chinese-language interactive romantic comedy (visual novel) by the independent developer iCodeWoods, played in a phone or desktop web browser with no download or account. A laid-off programmer comes to fix the Wi-Fi on a dating show and is cast as its male contestant: 5 women and a hidden route, timed choices, 28 endings. The prologue and episode 1 are free; the full game is a one-time US$1 activation code (Payhip). The images are AI-generated; the story and code were written by the developer with an AI assistant. All characters are fictional adults. Contains romance scenes (swimwear, kissing); no nudity or sexual content. Website: https://oopswifi.github.io/</span></p>
+  <p>免费试玩部分一局大约 15 分钟。 · <span lang="en">The free demo takes about 15 minutes.</span></p>
+  <p><a href="./">▶ 免费试玩 Play the free demo</a> · <a href="./trailer.html">预告片 Trailer</a> · <a href="./about.html">关于与购买 About</a></p>
 
   <h2>基本信息 Fact sheet</h2>
   <table>
@@ -63,12 +67,23 @@
   <h2>直播与视频 Streams and videos</h2>
   <p class="note">欢迎直播、录视频、截图和做切片，包括带收益的视频，任何章节都可以。附上免费试玩链接就更好了；如果方便，请别在标题和封面里剧透隐藏路线。请勿转载或再分发游戏文件和剧本文字，也请勿公开激活码。游戏的音乐和音效都由程序实时合成，没有版权音乐，不会因为配乐被静音或下架。<br><span lang="en">Videos, streams, screenshots and clips of any part of the game are welcome, monetised ones included, and a link to the free demo is appreciated (if you can, keep the hidden route out of titles and thumbnails). Please don&#39;t re-upload the game files or the script, or post activation codes. All music and sound effects are synthesized by the game itself: no licensed music, so no copyright mutes or claims.</span></p>
 
+  <h2 id="embed">嵌入试玩 Embed the free demo</h2>
+  <p>在文章里放一个「点击才加载」的试玩框：读者点击之前，框里只有一张图片，不加载游戏，也不会自动播放；点击后，免费试玩在框里打开（框太小时在新标签页打开）。游戏运行在自己的网站上，存档和激活状态不会交给你的网站；没有统计代码，也没有 Cookie。<br>
+  <span lang="en">A click-to-play frame for articles: until a reader clicks, it holds one picture and nothing of the game, and nothing plays by itself. The click opens the free demo in the frame (in a new tab when the frame is too small to play in). The game runs on its own site, so saves never reach yours; no trackers, no cookies.</span></p>
+  <pre><code>&lt;iframe src=&quot;https://oopswifi.github.io/embed.html&quot; title=&quot;《糟了！我只是来恋综修网线的》免费试玩&quot; width=&quot;640&quot; height=&quot;360&quot; style=&quot;width:100%;max-width:960px;aspect-ratio:16/9;height:auto;border:0&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://oopswifi.github.io/?ref=editorial&quot;&gt;▶ 在浏览器里免费试玩《糟了！我只是来恋综修网线的》&lt;/a&gt;&lt;/p&gt;</code></pre>
+  <div class="embed-demo"><iframe src="./embed.html" title="糟了！我只是来恋综修网线的免费试玩（预览）" allowfullscreen loading="lazy"></iframe></div>
+  <p>邮件和不允许 iframe 的网站，用图片加链接：<span lang="en">Newsletters and sites without frames: a picture link.</span></p>
+  <pre><code>&lt;a href=&quot;https://oopswifi.github.io/?ref=editorial&quot;&gt;&lt;img src=&quot;https://oopswifi.github.io/embed/card.jpg&quot; width=&quot;600&quot; height=&quot;338&quot; alt=&quot;《糟了！我只是来恋综修网线的》：点击免费试玩（序章和第一集）&quot; style=&quot;display:block;max-width:100%;height:auto;border:0&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;a href=&quot;https://oopswifi.github.io/?ref=editorial&quot;&gt;▶ 免费试玩《糟了！我只是来恋综修网线的》：浏览器打开就能玩&lt;/a&gt;&lt;/p&gt;</code></pre>
+  <p>纯文字 Plain text: <code>免费试玩《糟了！我只是来恋综修网线的》：https://oopswifi.github.io/?ref=editorial</code><br>itch.io 上也能玩 Also on itch.io: <a href="https://stardustdemo.itch.io/oops-fix-the-wifi">https://stardustdemo.itch.io/oops-fix-the-wifi</a>（中国大陆可能打不开 · may not open in mainland China）</p>
+
   <h2>AI 声明 AI disclosure</h2>
   <p>游戏画面由 AI 生成，所有角色均为成年人，剧情纯属虚构。发布视频时，请按平台要求标注 AI 生成内容。本作含暧昧和亲密情节（泳装、吻戏），无裸露<br>
   <span lang="en">The images are AI-generated; all characters are fictional adults. Please follow each platform's AI-content labelling rules. Contains romance scenes (swimwear, kissing); no nudity or sexual content.</span></p>
 
   <h2>下载 Downloads</h2>
-  <p class="downloads"><a href="press/cover.jpg" download>封面 Cover 1280×720</a><a href="press/poster.jpg" download>海报 Poster 1080×1440</a><a href="icon-512.png" download>图标 Icon 512×512</a></p>
+  <p class="downloads"><a href="press/cover.jpg" download>封面 Cover 1280×720</a><a href="press/poster.jpg" download>海报 Poster 1080×1440</a><a href="icon-512.png" download>图标 Icon 512×512</a><a href="trailer/trailer.mp4" download>预告片 Trailer MP4 1280×720</a> (<a href="trailer.html">在线观看和字幕 Watch, with captions</a>)</p>
   <div class="gallery">
     <figure><a href="press/group_villa_ext_sunset.jpg" download><img src="press/group_villa_ext_sunset.jpg" alt="五位女嘉宾" loading="lazy"></a><figcaption>五位女嘉宾</figcaption></figure>
     <figure><a href="press/nian_living_night_smug.jpg" download><img src="press/nian_living_night_smug.jpg" alt="总导演顾念：「你，单身吗？」" loading="lazy"></a><figcaption>总导演顾念：「你，单身吗？」</figcaption></figure>

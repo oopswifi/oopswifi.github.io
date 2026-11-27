@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-hdbz4zqeeWuLfZWDc4s4oNvuhzXmWxQfJBzBpBAFLD4='">
+<title>心跳海岸線·嘉賓群（7） · 糟了！我只是來戀綜修網線的</title>
+    <meta name="description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回復。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。">
+    <link rel="canonical" href="https://oopswifi.github.io/chat-hant.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://oopswifi.github.io/chat.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://oopswifi.github.io/chat-hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://oopswifi.github.io/chat.html">
+    <meta name="theme-color" content="#14151f">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="./favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="糟了！我只是來戀綜修網線的">
+    <meta property="og:title" content="深夜嘉賓群：有人撤回了一條訊息 · 糟了！我只是來戀綜修網線的">
+    <meta property="og:description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回復。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。">
+    <meta property="og:url" content="https://oopswifi.github.io/chat-hant.html">
+    <meta property="og:image" content="https://oopswifi.github.io/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="糟了！我只是來戀綜修網線的：五位女嘉賓的合照">
+    <meta property="og:locale" content="zh_TW">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="深夜嘉賓群：有人撤回了一條訊息 · 糟了！我只是來戀綜修網線的">
+    <meta name="twitter:description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回復。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。">
+    <meta name="twitter:image" content="https://oopswifi.github.io/og-cover.jpg">
+<style>
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body { background: #14151f; color: #191919; font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif; }
+  body::before { content: ""; position: fixed; inset: 0; background: url(./media/shots/plate_balcony_night.webp) center / cover; filter: blur(6px) brightness(.55); }
+  .wrap { position: relative; display: flex; flex-direction: column; height: 100%; max-width: 440px; margin: 0 auto; }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: max(8px, env(safe-area-inset-top)) 12px 6px; color: #f1f3f5; }
+  .top b { font-size: 13px; font-weight: 400; color: #ced4da; }
+  .langs { display: flex; justify-content: flex-end; gap: 6px; margin: 0 0 10px; }
+  .langs a { min-width: 56px; padding: 6px 14px; border: 1px solid #495057; border-radius: 999px; color: #ced4da; text-align: center; text-decoration: none; font-size: 15px; }
+  .langs a[aria-current] { border-color: #f1f3f5; background: #f1f3f5; color: #c2255c; font-weight: 700; }
+  .langs { margin: 0; }
+  .phone { position: relative; flex: 1; min-height: 0; display: flex; flex-direction: column; background: #ededed; border-radius: 18px 18px 0 0; overflow: hidden; }
+  header { padding: 12px 14px; border-bottom: 1px solid #d9d9d9; text-align: center; font-weight: 800; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .list { flex: 1; overflow-y: auto; padding: 12px 10px 16px; display: flex; flex-direction: column; gap: 12px; cursor: pointer; }
+  .pm { display: flex; align-items: flex-start; gap: 8px; }
+  .pm.me { justify-content: flex-end; }
+  .pm.new { animation: pm-in .28s ease; }
+  @keyframes pm-in { from { opacity: 0; transform: translateY(10px); } }
+  .av { flex: 0 0 40px; height: 40px; border-radius: 8px; overflow: hidden; display: grid; place-items: center; color: #fff; font-weight: 800; background: #868e96; }
+  .av img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .av.me { background: #ffd43b; color: #5c3d00; }
+  .col { display: flex; flex-direction: column; gap: 3px; max-width: 72%; }
+  .name { font-size: 12px; color: #888; }
+  .bubble { padding: 9px 12px; border-radius: 8px; background: #fff; font-size: 16px; line-height: 1.45; word-break: break-word; }
+  .pm.me .bubble { max-width: 72%; background: #95ec69; }
+  .bubble.typing { display: flex; gap: 5px; padding: 14px 14px; }
+  .bubble.typing i { width: 7px; height: 7px; border-radius: 50%; background: #b5b5b5; animation: dots 1s infinite; }
+  .bubble.typing i:nth-child(2) { animation-delay: .15s; } .bubble.typing i:nth-child(3) { animation-delay: .3s; }
+  @keyframes dots { 50% { transform: translateY(-4px); background: #888; } }
+  .pm.sys { justify-content: center; }
+  .pm.sys span { max-width: 86%; padding: 3px 10px; border-radius: 6px; background: rgba(0, 0, 0, .08); color: #777; font-size: 13px; text-align: center; }
+  .pm.sys.thought span { background: none; color: #5c7cfa; font-style: italic; font-size: 14px; }
+  .panel { padding: 10px 10px max(12px, env(safe-area-inset-bottom)); background: #f7f7f7; border-top: 1px solid #ddd; }
+  .panel[hidden] { display: none; }
+  .panel p { margin: 0 0 8px; color: #555; font-size: 13px; text-align: center; }
+  .pick { display: flex; align-items: center; gap: 8px; width: 100%; margin: 6px 0; padding: 10px 12px; min-height: 46px; border: 1px solid #d0d0d0; border-radius: 10px; background: #fff; color: #191919; font: inherit; font-size: 15px; text-align: left; cursor: pointer; }
+  .key { flex: 0 0 22px; height: 22px; border-radius: 50%; background: #f06595; color: #fff; font-size: 13px; font-weight: 700; text-align: center; line-height: 22px; }
+  .stamp { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; background: rgba(20, 21, 31, .82); color: #fff; text-align: center; }
+  .stamp[hidden] { display: none; }
+  .stamp .big { padding: 6px 18px; border: 3px solid #ff6b6b; border-radius: 10px; color: #ff6b6b; font-size: 26px; font-weight: 900; transform: rotate(-6deg); }
+  .stamp p { margin: 0; color: #dee2e6; font-size: 14px; }
+  .btn { display: block; width: 100%; max-width: 340px; margin: 4px auto; padding: 12px 14px; border: 0; border-radius: 999px; font: inherit; font-size: 16px; font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; }
+  .btn.go { background: linear-gradient(90deg, #f06595, #ff922b); color: #fff; }
+  .btn.soft { background: #e9ecef; color: #343a40; }
+  footer { padding: 6px 12px 10px; background: #f7f7f7; color: #868e96; font-size: 11px; text-align: center; }
+  footer a { color: #868e96; }
+  noscript p { margin: 6px 0; }
+  @media (prefers-reduced-motion: reduce) { .pm.new { animation: none; } .bubble.typing i { animation: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><b>第一集 · 深夜 · 你的手機</b><nav class="langs" aria-label="简体 / 繁體"><a href="./chat.html" hreflang="zh-Hans" lang="zh-Hans">简体</a><a href="./chat-hant.html" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體</a></nav></div>
+  <main class="phone">
+    <header id="title">心跳海岸線·嘉賓群（7）</header>
+    <div id="list" class="list" role="log" aria-live="polite" aria-label="群聊訊息（點一下可以跳過等待）"><noscript><p>「總導演·顧念」邀請你加入了群聊</p><p>總導演·顧念：群規。一，不准劇透。二，不准私下約會。三，早上八點準時起床。</p><p>總導演·顧念：四，男嘉賓不准在群裡發奇怪的東西。</p><p>小滿甜品🍓：大家好呀！今天的雞腿還剩一點，明早熱一熱當早餐～</p><p>鹿神（別@我）：收到。我要兩個。</p><p>星遙 Starlit✨：所以男嘉賓到底什麼來頭？說說唄。</p><p>葉知秋 | 律師：根據我的觀察：被裁員，被騙來，被迫上鏡。</p><p>溫言（值班中）：……我先睡了，大家晚安。</p><p>「溫言」撤回了一條訊息</p><p>小滿甜品🍓：言言姐撤回了什麼！！</p><p>星遙 Starlit✨：我看到了。她說&quot;男嘉賓的手腕很好摸&quot;。</p><p>溫言（值班中）：沒有！！我說的是&quot;男嘉賓的脈搏很好摸&quot;！</p><p>溫言（值班中）：……好像也不對。我睡了。</p><p>（群裡安靜了三秒。所有人都在等我說話。）</p><p><a href="./?ref=chat&lang=zh-Hant">▶ 從頭玩免費試玩版</a></p></noscript></div>
+    <div id="picks" class="panel" hidden><p>選擇你的回覆</p></div>
+    <div id="end" class="panel" hidden>
+      <a class="btn go" href="./?ref=chat&lang=zh-Hant">▶ 想知道白天和這五位發生了什麼？從頭玩免費試玩版</a>
+      <button class="btn soft" type="button" data-again>↩ 換一個回覆</button>
+    </div>
+    <div id="stamp" class="stamp" role="alertdialog" aria-label="翻車結局" hidden>
+      <div class="big">翻車結局：移出群聊</div>
+      <p>你成了節目史上第一個被移出嘉賓群的男嘉賓。</p>
+      <button class="btn soft" type="button" data-again>↩ 回到上一個選擇</button>
+      <a class="btn go" href="./?ref=chat&lang=zh-Hant">▶ 從頭玩免費試玩版：序章和第一集免費</a>
+    </div>
+    <footer>糟了！我只是來戀綜修網線的 · 畫面由 AI 生成 · 本作所有角色均為成年人，劇情純屬虛構 · <a href="./about.html#zh-hant">關於</a></footer>
+  </main>
+</div>
+<script>(function () {
+  var D = {"intro":[{"from":"sys","text":"「總導演·顧念」邀請你加入了群聊"},{"from":"nian","text":"群規。一，不准劇透。二，不准私下約會。三，早上八點準時起床。","name":"總導演·顧念","color":"#f03e3e"},{"from":"nian","text":"四，男嘉賓不准在群裡發奇怪的東西。","name":"總導演·顧念","color":"#f03e3e"},{"from":"man","text":"大家好呀！今天的雞腿還剩一點，明早熱一熱當早餐～","name":"小滿甜品🍓","color":"#ff7aa2"},{"from":"lu","text":"收到。我要兩個。","name":"鹿神（別@我）","color":"#12b886"},{"from":"yao","text":"所以男嘉賓到底什麼來頭？說說唄。","name":"星遙 Starlit✨","color":"#9775fa"},{"from":"qiu","text":"根據我的觀察：被裁員，被騙來，被迫上鏡。","name":"葉知秋 | 律師","color":"#4c6ef5"},{"from":"yan","text":"……我先睡了，大家晚安。","name":"溫言（值班中）","color":"#4dabf7"},{"from":"sys","text":"「溫言」撤回了一條訊息"},{"from":"man","text":"言言姐撤回了什麼！！","name":"小滿甜品🍓","color":"#ff7aa2"},{"from":"yao","text":"我看到了。她說\"男嘉賓的手腕很好摸\"。","name":"星遙 Starlit✨","color":"#9775fa"},{"from":"yan","text":"沒有！！我說的是\"男嘉賓的脈搏很好摸\"！","name":"溫言（值班中）","color":"#4dabf7"},{"from":"yan","text":"……好像也不對。我睡了。","name":"溫言（值班中）","color":"#4dabf7"},{"from":"sys","text":"（群裡安靜了三秒。所有人都在等我說話。）","thought":true}],"replies":[{"label":"「大家晚安。明天一早，我把 Wi-Fi 修到滿格。」","kick":false,"lines":[{"from":"me","text":"大家晚安。明天一早，我把別墅的 Wi-Fi 修到滿格。"},{"from":"lu","text":"這個好。我上一把團戰卡了三次。","name":"鹿神（別@我）","color":"#12b886"},{"from":"qiu","text":"務實。","name":"葉知秋 | 律師","color":"#4c6ef5"}]},{"label":"（發了一個\"小貓比心\"的表情包）","kick":false,"lines":[{"from":"me","text":"[表情包：一隻對著鏡頭比心的小貓]"},{"from":"yao","text":"喲，男嘉賓挺會的嘛。","name":"星遙 Starlit✨","color":"#9775fa"},{"from":"man","text":"好可愛！我也要這個表情包！","name":"小滿甜品🍓","color":"#ff7aa2"}]},{"label":"「@溫言 我當時的心率，確實是一百一十二。」","kick":false,"lines":[{"from":"me","text":"@溫言 我當時的心率，確實是一百一十二。"},{"from":"man","text":"哇哦——","name":"小滿甜品🍓","color":"#ff7aa2"},{"from":"yao","text":"哇哦——","name":"星遙 Starlit✨","color":"#9775fa"},{"from":"yan","text":"…………不准@我。","name":"溫言（值班中）","color":"#4dabf7"}]},{"label":"（把群名改成「陸川和他的五個女朋友」）","kick":true,"lines":[{"from":"sys","text":"你修改群名為「陸川和他的五個女朋友」","title":"陸川和他的五個女朋友（7）"},{"from":"qiu","text":"……","name":"葉知秋 | 律師","color":"#4c6ef5"},{"from":"yao","text":"？","name":"星遙 Starlit✨","color":"#9775fa"},{"from":"man","text":"？？？","name":"小滿甜品🍓","color":"#ff7aa2"},{"from":"lu","text":"舉報了。","name":"鹿神（別@我）","color":"#12b886"},{"from":"sys","text":"「葉知秋」修改群名為「心跳海岸線·嘉賓群」","title":"心跳海岸線·嘉賓群（7）"},{"from":"sys","text":"「總導演·顧念」將你移出了群聊"}]}],"outro":[{"from":"nian","text":"都睡覺。明早八點，客廳集合。","name":"總導演·顧念","color":"#f03e3e"}],"group":"心跳海岸線·嘉賓群（7）"};
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var list = document.getElementById('list');
+  var title = document.getElementById('title');
+  var picks = document.getElementById('picks');
+  var stamp = document.getElementById('stamp');
+  var end = document.getElementById('end');
+  var pending = null;
+  var mark = 0;
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+  function avatar(m) {
+    if (m.from === 'me') return el('div', 'av me', '我');
+    var a = el('div', 'av');
+    a.style.background = m.color;
+    var img = el('img');
+    img.src = './media/avatars/' + m.from + '.webp';
+    img.alt = '';
+    a.appendChild(img);
+    return a;
+  }
+  function node(m, typing) {
+    if (m.from === 'sys') { var s = el('div', 'pm sys' + (m.thought ? ' thought' : '')); s.appendChild(el('span', '', m.text)); return s; }
+    var bubble = typing ? el('div', 'bubble typing') : el('div', 'bubble', m.text);
+    if (typing) for (var i = 0; i < 3; i++) bubble.appendChild(el('i'));
+    var row = el('div', 'pm' + (m.from === 'me' ? ' me' : ''));
+    if (m.from === 'me') { row.appendChild(bubble); row.appendChild(avatar(m)); return row; }
+    var col = el('div', 'col');
+    col.appendChild(el('div', 'name', m.name));
+    col.appendChild(bubble);
+    row.appendChild(avatar(m));
+    row.appendChild(col);
+    return row;
+  }
+  function show(e) { e.classList.add('new'); list.appendChild(e); list.scrollTop = list.scrollHeight; }
+  function later(ms, fn) { pending = { fn: fn, t: setTimeout(function () { pending = null; fn(); }, ms) }; }
+  function hurry() { if (!pending) return; var p = pending; pending = null; clearTimeout(p.t); p.fn(); }
+  function play(lines, done) {
+    var i = 0;
+    (function next() {
+      if (i >= lines.length) { done(); return; }
+      var m = lines[i++];
+      var gap = Math.min(2200, 650 + 45 * m.text.length);
+      var put = function () {
+        if (m.title) title.textContent = m.title;
+        show(node(m));
+        later(gap, next);
+      };
+      if (m.from !== 'sys' && m.from !== 'me' && !reduce) {
+        var dots = node(m, true);
+        show(dots);
+        later(520, function () { dots.remove(); put(); });
+      } else put();
+    })();
+  }
+  function ask() {
+    mark = list.children.length;
+    picks.hidden = false;
+    var first = picks.querySelector('button');
+    if (first) first.focus({ preventScroll: true });
+  }
+  function choose(k) {
+    var r = D.replies[k];
+    picks.hidden = true;
+    play(r.lines, function () {
+      if (r.kick) { stamp.hidden = false; stamp.querySelector('button').focus(); return; }
+      play(D.outro, function () { end.hidden = false; });
+    });
+  }
+  function again() {
+    stamp.hidden = true;
+    end.hidden = true;
+    while (list.children.length > mark) list.removeChild(list.lastChild);
+    title.textContent = D.group;
+    ask();
+  }
+  D.replies.forEach(function (r, k) {
+    var b = el('button', 'pick');
+    b.type = 'button';
+    b.appendChild(el('span', 'key', String(k + 1)));
+    b.appendChild(document.createTextNode(r.label));
+    b.addEventListener('click', function () { choose(k); });
+    picks.appendChild(b);
+  });
+  list.addEventListener('click', hurry);
+  document.querySelectorAll('[data-again]').forEach(function (b) { b.addEventListener('click', again); });
+  play(D.intro, ask);
+})();</script>
+</body>
+</html>
