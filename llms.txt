@@ -23,6 +23,7 @@ Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) i
 
 - [免费试玩 Play](https://oopswifi.github.io/): 游戏本身，序章和第一集免费 / the game; the prologue and episode 1 are free
 - [关于与购买 About](https://oopswifi.github.io/about.html): 价格、交付、退款、隐私、联系方式和常见问题 / price, delivery, refunds, privacy, contact and FAQ
+- [About & buying (English)](https://oopswifi.github.io/about-en.html): 英文版的关于与购买 / the about page in English: price, delivery, refunds, privacy, contact and the AI disclosure
 - [媒体与主播资料 Press kit](https://oopswifi.github.io/press.html): 资料、直播和视频说明、AI 声明、封面和截图下载 / fact sheet, stream and video policy, AI disclosure, downloads
 - [预告片 Trailer](https://oopswifi.github.io/trailer.html): 实机预告片和字幕 / the trailer with its captions
 - [攻略与结局指南 Guide](https://oopswifi.github.io/guide.html): 玩法、结局种类和提示，剧透默认折叠 / how it plays and where endings come from, spoilers folded

@@ -5,6 +5,7 @@
   "price": "约 ¥7",
   "priceUsd": "1",
   "payNote": "按美元结算 US$1。中国大陆可以用微信支付，也支持 PayPal 和 Visa、Mastercard 等境外银行卡。付款后，激活码会显示在付款完成页，同时发到你的邮箱。",
+  "payNoteEn": "Charged in US dollars: US$1. Pay with PayPal or a Visa, Mastercard or other card (WeChat Pay in mainland China). After payment, your activation code appears on the confirmation page and is emailed to you.",
   "seller": "iCodeWoods",
   "sellerUrl": "https://github.com/963239327",
   "statementName": "ICODEWOODS",
@@ -22,5 +23,6 @@
   "analytics": {
     "websiteId": "0be078b4-5724-40d2-b13c-160a5840fa8a"
   },
-  "indexNowKey": "61a2a4028eade9d349dae673270b3eed"
+  "indexNowKey": "61a2a4028eade9d349dae673270b3eed",
+  "english": "hidden"
 }
