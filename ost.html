@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-xZcngowLIMP8J2MMXxW6AaTwTRB55DIDGpQbABqIaRk='">
+<title>修网线电台 · 糟了！我只是来恋综修网线的</title>
+    <meta name="description" content="「修网线电台」：《糟了！我只是来恋综修网线的》的游戏原声，在浏览器里实时合成的 8 首合成器 BGM，配一个 25 分钟番茄钟，写代码、自习的时候开着。点一下才出声。序章和第一集免费试玩。">
+    <link rel="canonical" href="https://oopswifi.github.io/ost.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://oopswifi.github.io/ost.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://oopswifi.github.io/ost-hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://oopswifi.github.io/ost.html">
+    <meta name="theme-color" content="#14151f">
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="./favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="糟了！我只是来恋综修网线的">
+    <meta property="og:title" content="修网线电台 · 糟了！我只是来恋综修网线的">
+    <meta property="og:description" content="「修网线电台」：《糟了！我只是来恋综修网线的》的游戏原声，在浏览器里实时合成的 8 首合成器 BGM，配一个 25 分钟番茄钟，写代码、自习的时候开着。点一下才出声。序章和第一集免费试玩。">
+    <meta property="og:url" content="https://oopswifi.github.io/ost.html">
+    <meta property="og:image" content="https://oopswifi.github.io/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="糟了！我只是来恋综修网线的：五位女嘉宾的合照">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="修网线电台 · 糟了！我只是来恋综修网线的">
+    <meta name="twitter:description" content="「修网线电台」：《糟了！我只是来恋综修网线的》的游戏原声，在浏览器里实时合成的 8 首合成器 BGM，配一个 25 分钟番茄钟，写代码、自习的时候开着。点一下才出声。序章和第一集免费试玩。">
+    <meta name="twitter:image" content="https://oopswifi.github.io/og-cover.jpg">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: #0b0d17; color: #f1f3f5; font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; line-height: 1.6; }
+  .bg { position: fixed; inset: 0; overflow: hidden; z-index: 0; }
+  .bg img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.9); }
+  .bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,13,23,.55), rgba(11,13,23,.78) 55%, rgba(11,13,23,.92)); }
+  .rain { position: absolute; inset: -200px; z-index: 1; background: repeating-linear-gradient(103deg, rgba(200, 220, 255, .22) 0 2px, transparent 2px 26px); background-size: 220px 220px; animation: rain .35s linear infinite; }
+  .rain[hidden] { display: none; }
+  @keyframes rain { from { background-position: 0 0; } to { background-position: -60px 220px; } }
+  @media (prefers-reduced-motion: reduce) { .rain { animation: none; } }
+  main { position: relative; z-index: 2; max-width: 600px; margin: 0 auto; padding: max(12px, env(safe-area-inset-top)) 16px 32px; }
+  .langs { display: flex; justify-content: flex-end; gap: 6px; margin: 0 0 10px; }
+  .langs a { min-width: 56px; padding: 6px 14px; border: 1px solid #495057; border-radius: 999px; color: #ced4da; text-align: center; text-decoration: none; font-size: 15px; }
+  .langs a[aria-current] { border-color: #f1f3f5; background: #f1f3f5; color: #c2255c; font-weight: 700; }
+  h1 { margin: 6px 0 2px; font-size: clamp(26px, 7vw, 36px); letter-spacing: 2px; }
+  .lead { margin: 0 0 14px; color: #ced4da; }
+  .card { background: rgba(20, 22, 38, .72); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 14px 16px; margin: 12px 0; backdrop-filter: blur(6px); }
+  .now { margin: 0; font-size: 15px; color: #adb5bd; }
+  .now b { display: block; margin-top: 2px; font-size: 21px; color: #fff; }
+  .controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin: 12px 0 8px; }
+  .controls button { width: 52px; height: 52px; border: 0; border-radius: 50%; background: rgba(255,255,255,.12); color: #fff; font-size: 20px; cursor: pointer; }
+  .controls .big { width: 72px; height: 72px; background: linear-gradient(135deg, #f06595, #ff922b); font-size: 28px; }
+  .row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .vol { flex: 1; display: flex; align-items: center; gap: 8px; min-width: 200px; }
+  .vol input { flex: 1; min-width: 0; accent-color: #f06595; }
+  .chip { padding: 8px 14px; border: 1px solid rgba(255,255,255,.3); border-radius: 999px; background: none; color: #f1f3f5; font: inherit; font-size: 15px; cursor: pointer; }
+  .chip[aria-pressed="true"] { border-color: #74c0fc; background: rgba(116,192,252,.2); }
+  ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .track { width: 100%; min-height: 48px; padding: 8px 10px; border: 1px solid rgba(255,255,255,.14); border-radius: 12px; background: rgba(20,22,38,.6); color: #e9ecef; font: inherit; font-size: 14px; text-align: left; cursor: pointer; }
+  .track .n { display: block; font-size: 12px; color: #868e96; }
+  .track[aria-pressed="true"] { border-color: #f06595; background: rgba(240,101,149,.22); color: #fff; }
+  #pomo .clock { font: 700 46px/1.1 Menlo, Consolas, monospace; letter-spacing: 2px; text-align: center; margin: 4px 0; }
+  #pomo[data-mode="rest"] .clock { color: #8ce99a; }
+  #pomo h2 { margin: 0; font-size: 17px; }
+  #pomo-label { margin: 0; text-align: center; color: #ced4da; font-size: 15px; }
+  #pomo .row { justify-content: center; margin-top: 8px; }
+  #pomo-done { margin: 8px 0 0; text-align: center; color: #ffd43b; }
+  #pomo-done[hidden], #app[hidden] { display: none; }
+  .note { color: #adb5bd; font-size: 14px; }
+  .go { display: block; padding: 14px 16px; border-radius: 16px; background: linear-gradient(90deg, rgba(240,101,149,.92), rgba(255,146,43,.92)); color: #fff; font-weight: 700; text-decoration: none; text-align: center; }
+  footer { margin-top: 24px; color: #868e96; font-size: 13px; text-align: center; }
+  footer a { color: #ced4da; }
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"><img id="plate" src="./media/shots/plate_villa_ext_night.webp" alt="" width="1920" height="1080"><div id="rain" class="rain" hidden></div></div>
+<main>
+  <nav class="langs" aria-label="简体 / 繁體"><a href="./ost.html" hreflang="zh-Hans" lang="zh-Hans" aria-current="page">简体</a><a href="./ost-hant.html" hreflang="zh-Hant" lang="zh-Hant">繁體</a></nav>
+  <h1>📻 修网线电台</h1>
+  <p class="lead">恋综片场的合成器原声，写代码、自习、发呆的时候开着。点 ▶ 才会出声。</p>
+  <noscript><p class="card">电台要用 JavaScript 在浏览器里实时合成音乐，打开 JavaScript 就能听。</p></noscript>
+  <div id="app" hidden>
+    <section id="player" class="card" data-state="idle" aria-label="播放器">
+      <p class="now"><span id="no">01</span> / 08<b id="name">片头 · 心跳海岸线</b></p>
+      <div class="controls">
+        <button id="prev" type="button" aria-label="上一首">⏮</button>
+        <button id="play" type="button" class="big" aria-label="播放">▶</button>
+        <button id="next" type="button" aria-label="下一首">⏭</button>
+      </div>
+      <div class="row">
+        <label class="vol">🔈 <input id="vol" type="range" min="0" max="100" value="60" aria-label="音量"> 🔊</label>
+        <button id="rain-btn" class="chip" type="button" aria-pressed="false">🌧 雨声</button>
+      </div>
+    </section>
+    <ol id="tracks" aria-label="曲目"></ol>
+    <section id="pomo" class="card" data-mode="focus" aria-label="番茄钟">
+      <h2>🍅 25 分钟番茄钟</h2>
+      <div id="clock" class="clock" role="timer">25:00</div>
+      <p id="pomo-label">专注 · 修完这段代码就去谈恋爱</p>
+      <div class="row"><button id="pomo-go" class="chip" type="button">▶ 开始</button><button id="pomo-reset" class="chip" type="button">↺ 重置</button></div>
+      <p id="pomo-done" role="status" hidden></p>
+    </section>
+  </div>
+  <p class="note">音乐和游戏里一样，由程序在你的浏览器里实时合成：没有音频文件，也没有版权音乐。切到别的标签页也会接着放。</p>
+  <a class="go" href="./?ref=ost">来自互动恋爱喜剧《糟了！我只是来恋综修网线的》 · 序章 + 第一集免费试玩 ▶</a>
+  <footer>糟了！我只是来恋综修网线的 · 画面由 AI 生成 · 本作所有角色均为成年人，剧情纯属虚构 · <a href="./about.html">关于</a></footer>
+</main>
+<script>(function () {
+
+                                                                                                              
+                   
+              
+                     
+                                                      
+                   
+                 
+ 
+const N = (name        ) => {
+  const m = /^([A-G])(#|b)?(\d)$/.exec(name) ;
+  const base = { C: 0, D: 2, E: 4, F: 5, G: 7, A: 9, B: 11 }[m[1]       ];
+  return 12 * (Number(m[3]) + 1) + base + (m[2] === '#' ? 1 : m[2] === 'b' ? -1 : 0);
+};
+const chord = (...notes          ) => notes.map(N);
+const MOODS                                         = {
+  title: { bpm: 96, style: 'arp', drums: 1, bell: true, chords: [chord('C3', 'E4', 'G4', 'B4'), chord('A2', 'C4', 'E4', 'G4'), chord('F2', 'A3', 'C4', 'E4'), chord('G2', 'B3', 'D4', 'E4')] },
+  daily: { bpm: 112, style: 'pluck', drums: 2, chords: [chord('F2', 'A3', 'C4', 'E4'), chord('G2', 'B3', 'D4', 'G4'), chord('E2', 'G3', 'B3', 'D4'), chord('A2', 'C4', 'E4', 'G4')] },
+  comedy: { bpm: 136, style: 'bounce', drums: 2, chords: [chord('C3', 'C4', 'E4', 'G4'), chord('F2', 'C4', 'F4', 'A4'), chord('G2', 'B3', 'D4', 'G4'), chord('C3', 'C4', 'E4', 'G4')] },
+  romance: { bpm: 78, style: 'arp', drums: 0, bell: true, chords: [chord('F2', 'A3', 'C4', 'E4'), chord('E2', 'G3', 'B3', 'D4'), chord('D2', 'F3', 'A3', 'C4'), chord('C2', 'E3', 'G3', 'B3')] },
+  night: { bpm: 68, style: 'pad', drums: 0, bell: true, chords: [chord('A2', 'C4', 'E4', 'B4'), chord('F2', 'A3', 'C4', 'E4'), chord('C3', 'E3', 'G3', 'D4'), chord('G2', 'B3', 'D4', 'A4')] },
+  tension: { bpm: 120, style: 'pulse', drums: 1, chords: [chord('D2', 'D3', 'F3', 'A3'), chord('Bb1', 'D3', 'F3', 'Bb3'), chord('G1', 'D3', 'G3', 'Bb3'), chord('A1', 'C#3', 'E3', 'A3')] },
+  sad: { bpm: 64, style: 'pad', drums: 0, chords: [chord('A2', 'C4', 'E4'), chord('F2', 'A3', 'C4'), chord('C3', 'E3', 'G3'), chord('G2', 'B3', 'D4')] },
+  ending: { bpm: 88, style: 'arp', drums: 1, bell: true, chords: [chord('C3', 'E4', 'G4', 'C5'), chord('G2', 'D4', 'G4', 'B4'), chord('A2', 'C4', 'E4', 'A4'), chord('F2', 'A3', 'C4', 'F4')] },
+};
+const hz = (m        ) => 440 * Math.pow(2, (m - 69) / 12);
+const MOOD_NAMES         = [...(Object.keys(MOODS)          ), 'none'];
+const SFX_NAMES = [
+  'click', 'select', 'heart', 'pop', 'notify', 'phone', 'buzz', 'zap', 'whoosh', 'shutter', 'thunder',
+  'crash', 'door', 'splash', 'cheer', 'stamp', 'ending', 'tick',
+];
+class AudioEngine {
+  ctx                      = null;
+          master           ;
+          bgmBus           ;
+          sfxBus           ;
+          noise              ;
+          mood       = 'none';
+          moodGain                  = null;
+          step = 0;
+          nextTime = 0;
+          timer                = null;
+          bgmVolume = 0.55;
+          sfxVolume = 0.8;
+  /** Test hook: told about every music change and every sound effect played (scripts/promo-video.mjs). */
+  onEvent                                                       = null;
+  /** Must be called from a user gesture (browser autoplay policy). */
+  unlock() {
+    if (this.ctx) { if (document.visibilityState === 'visible') void this.ctx.resume(); return; }
+    const ctx = new AudioContext();
+    this.ctx = ctx;
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') void ctx.suspend();
+      else void ctx.resume();
+    });
+    this.master = ctx.createGain();
+    this.master.gain.value = 0.9;
+    const comp = ctx.createDynamicsCompressor();
+    this.master.connect(comp).connect(ctx.destination);
+    this.bgmBus = ctx.createGain();
+    this.bgmBus.gain.value = this.bgmVolume * 0.5;
+    this.bgmBus.connect(this.master);
+    this.sfxBus = ctx.createGain();
+    this.sfxBus.gain.value = this.sfxVolume;
+    this.sfxBus.connect(this.master);
+    this.noise = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
+    const d = this.noise.getChannelData(0);
+    for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    const pending = this.mood;
+    this.mood = 'none';
+    if (pending !== 'none') this.playBgm(pending);
+  }
+  setVolumes(bgm        , sfx        ) {
+    this.bgmVolume = bgm;
+    this.sfxVolume = sfx;
+    if (this.ctx) {
+      this.bgmBus.gain.setTargetAtTime(bgm * 0.5, this.ctx.currentTime, 0.05);
+      this.sfxBus.gain.setTargetAtTime(sfx, this.ctx.currentTime, 0.05);
+    }
+  }
+  get currentMood() { return this.mood; }
+  playBgm(mood      ) {
+    if (mood === this.mood) return;
+    this.mood = mood;
+    this.onEvent?.('bgm', mood);
+    const ctx = this.ctx;
+    if (!ctx) return;
+    if (this.moodGain) {
+      const old = this.moodGain;
+      old.gain.setTargetAtTime(0, ctx.currentTime, 0.4);
+      setTimeout(() => old.disconnect(), 2500);
+      this.moodGain = null;
+    }
+    if (this.timer) { clearInterval(this.timer); this.timer = null; }
+    if (mood === 'none') return;
+    const g = ctx.createGain();
+    g.gain.value = 0;
+    g.gain.setTargetAtTime(1, ctx.currentTime + 0.3, 0.5);
+    g.connect(this.bgmBus);
+    this.moodGain = g;
+    this.step = 0;
+    this.nextTime = ctx.currentTime + 0.35;
+    this.timer = window.setInterval(() => this.schedule(), 30);
+  }
+          schedule() {
+    const ctx = this.ctx;
+    if (!ctx || this.mood === 'none' || !this.moodGain) return;
+    const def = MOODS[this.mood];
+    const stepDur = 60 / def.bpm / 2;
+    if (ctx.currentTime - this.nextTime > 0.25) this.nextTime = ctx.currentTime + 0.05;
+    while (this.nextTime < ctx.currentTime + 0.15) {
+      this.playStep(def, this.step, this.nextTime, stepDur, this.moodGain);
+      this.step++;
+      this.nextTime += stepDur;
+    }
+  }
+          playStep(def         , step        , t        , sd        , out          ) {
+    const bar = Math.floor(step / 8) % def.chords.length;
+    const s = step % 8;
+    const ch = def.chords[bar];
+    const root = ch[0];
+    const upper = ch.slice(1);
+    if (s === 0) {
+      this.pad(upper, t, sd * 8, out, def.style === 'pad' ? 0.11 : 0.06);
+      this.bass(root, t, sd * (def.style === 'pulse' ? 1 : 3), out);
+    }
+    switch (def.style) {
+      case 'arp': {
+        const seq = [0, 1, 2, 1, 0, 2, 1, upper.length - 1];
+        this.pluck(upper[seq[s] % upper.length] + 12, t, out, 0.07);
+        break;
+      }
+      case 'pluck':
+        if ([0, 3, 6].includes(s)) upper.forEach((n) => this.pluck(n + 12, t, out, 0.035));
+        if (s === 4) this.bass(root + 7, t, sd * 2, out);
+        break;
+      case 'bounce':
+        if (s % 2 === 1) upper.forEach((n) => this.pluck(n + 12, t, out, 0.04));
+        if (s % 2 === 0) this.bass(s % 4 === 0 ? root : root + 7, t, sd * 0.9, out);
+        break;
+      case 'pad':
+        if (s === 4) this.pluck(upper[(bar + 1) % upper.length] + 24, t, out, 0.035);
+        break;
+      case 'pulse':
+        this.bass(root, t, sd * 0.8, out);
+        if (s === 0 || s === 5) this.pluck(upper[s % upper.length] + 12, t, out, 0.04);
+        break;
+    }
+    if (def.bell && s === 2 && bar % 2 === 0) this.bell(upper[upper.length - 1] + 24, t, out);
+    if (def.drums >= 1) {
+      if (s === 0 || (def.drums === 2 && s === 4)) this.kick(t, out);
+      if (def.drums === 2 && (s === 2 || s === 6)) this.snare(t, out);
+      if (s % 2 === 1) this.hat(t, out, def.drums === 2 ? 0.05 : 0.03);
+    }
+  }
+          env(g          , t        , a        , peak        , release        ) {
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(peak, t + a);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + a + release);
+  }
+          osc(type                , freq        , t        , dur        , dest           , detune = 0) {
+    const o = this.ctx .createOscillator();
+    o.type = type;
+    o.frequency.value = freq;
+    o.detune.value = detune;
+    o.connect(dest);
+    o.start(t);
+    o.stop(t + dur + 0.05);
+    return o;
+  }
+          pad(notes          , t        , dur        , out           , vol        ) {
+    const ctx = this.ctx ;
+    const lp = ctx.createBiquadFilter();
+    lp.type = 'lowpass';
+    lp.frequency.value = 1400;
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(vol, t + 0.5);
+    g.gain.setValueAtTime(vol, t + dur - 0.3);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + dur + 0.6);
+    lp.connect(g).connect(out);
+    for (const n of notes) {
+      this.osc('sawtooth', hz(n), t, dur + 0.6, lp, -7);
+      this.osc('triangle', hz(n), t, dur + 0.6, lp, 7);
+    }
+  }
+          pluck(n        , t        , out           , vol        ) {
+    const g = this.ctx .createGain();
+    g.connect(out);
+    this.env(g, t, 0.005, vol, 0.35);
+    this.osc('triangle', hz(n), t, 0.4, g);
+  }
+          bell(n        , t        , out           ) {
+    const g = this.ctx .createGain();
+    g.connect(out);
+    this.env(g, t, 0.005, 0.05, 1.4);
+    this.osc('sine', hz(n), t, 1.5, g);
+    this.osc('sine', hz(n) * 2.01, t, 0.8, g);
+  }
+          bass(n        , t        , dur        , out           ) {
+    const g = this.ctx .createGain();
+    g.connect(out);
+    this.env(g, t, 0.01, 0.16, Math.max(0.15, dur));
+    this.osc('triangle', hz(n), t, dur + 0.1, g);
+  }
+          kick(t        , out           ) {
+    const ctx = this.ctx ;
+    const g = ctx.createGain();
+    g.connect(out);
+    this.env(g, t, 0.003, 0.35, 0.18);
+    const o = this.osc('sine', 120, t, 0.2, g);
+    o.frequency.exponentialRampToValueAtTime(42, t + 0.15);
+  }
+          noiseHit(t        , out           , type                  , freq        , vol        , dur        ) {
+    const ctx = this.ctx ;
+    const src = ctx.createBufferSource();
+    src.buffer = this.noise;
+    const f = ctx.createBiquadFilter();
+    f.type = type;
+    f.frequency.value = freq;
+    const g = ctx.createGain();
+    this.env(g, t, 0.002, vol, dur);
+    src.connect(f).connect(g).connect(out);
+    src.start(t);
+    src.stop(t + dur + 0.05);
+    return { src, f, g };
+  }
+          snare(t        , out           ) { this.noiseHit(t, out, 'bandpass', 1800, 0.12, 0.12); }
+          hat(t        , out           , vol        ) { this.noiseHit(t, out, 'highpass', 7000, vol, 0.04); }
+  sfx(name        ) {
+    const ctx = this.ctx;
+    if (!ctx) return;
+    this.onEvent?.('sfx', name);
+    const t = ctx.currentTime + 0.01;
+    const out = this.sfxBus;
+    const tone = (type                , from        , to        , start        , dur        , vol        ) => {
+      const g = ctx.createGain();
+      g.connect(out);
+      this.env(g, t + start, 0.005, vol, dur);
+      const o = this.osc(type, from, t + start, dur, g);
+      if (to !== from) o.frequency.exponentialRampToValueAtTime(to, t + start + dur);
+    };
+    switch (name) {
+      case 'click': tone('sine', 880, 660, 0, 0.06, 0.12); break;
+      case 'select': tone('triangle', 660, 990, 0, 0.12, 0.18); break;
+      case 'heart': tone('sine', hz(84), hz(84), 0, 0.3, 0.2); tone('sine', hz(88), hz(88), 0.09, 0.45, 0.2); break;
+      case 'pop': tone('sine', 300, 900, 0, 0.12, 0.3); break;
+      case 'notify': tone('sine', hz(81), hz(81), 0, 0.15, 0.2); tone('sine', hz(86), hz(86), 0.12, 0.25, 0.2); break;
+      case 'phone': for (let i = 0; i < 4; i++) { tone('square', 960, 960, i * 0.18, 0.08, 0.06); tone('square', 1200, 1200, i * 0.18 + 0.08, 0.08, 0.06); } break;
+      case 'buzz': tone('sawtooth', 220, 90, 0, 0.6, 0.25); tone('square', 110, 60, 0.05, 0.6, 0.12); break;
+      case 'zap': {
+        const g = ctx.createGain();
+        g.connect(out);
+        this.env(g, t, 0.005, 0.25, 0.5);
+        const o = this.osc('sawtooth', 70, t, 0.5, g);
+        const lfo = ctx.createOscillator();
+        const depth = ctx.createGain();
+        lfo.type = 'square';
+        lfo.frequency.value = 30;
+        depth.gain.value = 40;
+        lfo.connect(depth).connect(o.frequency);
+        lfo.start(t);
+        lfo.stop(t + 0.55);
+        this.noiseHit(t, out, 'highpass', 3000, 0.2, 0.4);
+        break;
+      }
+      case 'whoosh': { const n = this.noiseHit(t, out, 'bandpass', 400, 0.35, 0.7); n.f.frequency.exponentialRampToValueAtTime(3500, t + 0.6); break; }
+      case 'shutter': this.noiseHit(t, out, 'highpass', 2500, 0.4, 0.05); this.noiseHit(t + 0.08, out, 'highpass', 2000, 0.3, 0.06); break;
+      case 'thunder': { const n = this.noiseHit(t, out, 'lowpass', 500, 0.9, 2.2); n.f.frequency.exponentialRampToValueAtTime(80, t + 2); break; }
+      case 'crash': this.noiseHit(t, out, 'lowpass', 2500, 0.7, 0.6); tone('sine', 90, 40, 0, 0.3, 0.4); break;
+      case 'door': tone('sine', 140, 60, 0, 0.2, 0.4); this.noiseHit(t, out, 'lowpass', 800, 0.25, 0.15); break;
+      case 'splash': { const n = this.noiseHit(t, out, 'bandpass', 1200, 0.5, 0.8); n.f.frequency.exponentialRampToValueAtTime(400, t + 0.7); break; }
+      case 'cheer': for (let i = 0; i < 6; i++) tone('triangle', hz(76 + [0, 4, 7, 12, 7, 12][i]), hz(76 + [0, 4, 7, 12, 7, 12][i]), i * 0.07, 0.25, 0.12); this.noiseHit(t, out, 'bandpass', 2500, 0.15, 1.2); break;
+      case 'stamp': tone('sine', 160, 50, 0, 0.25, 0.6); this.noiseHit(t, out, 'lowpass', 1500, 0.4, 0.15); break;
+      case 'ending': [72, 76, 79, 84].forEach((m, i) => tone('sine', hz(m), hz(m), i * 0.14, 0.9, 0.16)); break;
+      case 'tick': tone('square', 1400, 1400, 0, 0.03, 0.05); break;
+      default: break;
+    }
+  }
+}
+
+  var D = {"tracks":[{"mood":"title","name":"片头 · 心跳海岸线","src":"./media/shots/plate_villa_ext_night.webp"},{"mood":"daily","name":"日常 · 海边别墅","src":"./media/shots/plate_villa_ext_day.webp"},{"mood":"comedy","name":"搞笑 · 深夜嘉宾群","src":"./media/shots/plate_bedroom.webp"},{"mood":"romance","name":"心动 · 心率一百一十二","src":"./media/shots/plate_balcony_night.webp"},{"mood":"night","name":"深夜 · 客厅的海","src":"./media/shots/plate_living_night.webp"},{"mood":"tension","name":"紧张 · 八秒抉择","src":"./media/shots/plate_office.webp"},{"mood":"sad","name":"低落 · 下雨的街口","src":"./media/shots/plate_street_night.webp"},{"mood":"ending","name":"片尾 · 海风与纸飞机","src":"./media/shots/plate_balcony_night.webp"}],"focus":1500,"rest":300};
+  var $ = function (id) { return document.getElementById(id); };
+  var engine = new AudioEngine();
+  var vol = 0.6;
+  var unlocked = false;
+  var playing = false;
+  var current = 0;
+  var rain = null;
+  var baseTitle = document.title;
+  engine.setVolumes(vol, 0.7);
+  /** The first tap creates the AudioContext; until then the page makes no sound and holds no audio. */
+  function unlock() {
+    if (unlocked) return;
+    unlocked = true;
+    engine.unlock();
+    // The game falls silent in a background tab; the radio goes on, since the visitor pressed play.
+    document.addEventListener('visibilitychange', function () { if ((playing || rain) && engine.ctx) engine.ctx.resume(); });
+  }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function show(k) {
+    current = (k + D.tracks.length) % D.tracks.length;
+    var t = D.tracks[current];
+    $('no').textContent = pad(current + 1);
+    $('name').textContent = t.name;
+    if ($('plate').getAttribute('src') !== t.src) $('plate').setAttribute('src', t.src);
+    Array.prototype.forEach.call(document.querySelectorAll('.track'), function (b, i) { b.setAttribute('aria-pressed', String(i === current)); });
+  }
+  function state() {
+    $('player').setAttribute('data-state', playing ? 'playing' : 'paused');
+    $('player').setAttribute('data-mood', playing ? D.tracks[current].mood : '');
+    $('play').textContent = playing ? '⏸' : '▶';
+    $('play').setAttribute('aria-label', playing ? '暂停' : '播放');
+  }
+  function play(k) {
+    unlock();
+    show(k);
+    engine.playBgm(D.tracks[current].mood);
+    playing = true;
+    state();
+  }
+  function pause() {
+    engine.playBgm('none');
+    playing = false;
+    state();
+  }
+  $('play').addEventListener('click', function () { if (playing) pause(); else play(current); });
+  $('prev').addEventListener('click', function () { if (playing) play(current - 1); else show(current - 1); });
+  $('next').addEventListener('click', function () { if (playing) play(current + 1); else show(current + 1); });
+  D.tracks.forEach(function (t, i) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'track';
+    b.setAttribute('data-mood', t.mood);
+    b.innerHTML = '<span class="n">' + pad(i + 1) + '</span>';
+    b.appendChild(document.createTextNode(t.name));
+    b.addEventListener('click', function () { play(i); });
+    var li = document.createElement('li');
+    li.appendChild(b);
+    $('tracks').appendChild(li);
+  });
+  $('vol').addEventListener('input', function () {
+    vol = Number($('vol').value) / 100;
+    engine.setVolumes(vol, 0.7);
+    if (rain) rain.gain.gain.setTargetAtTime(vol * 0.45, engine.ctx.currentTime, 0.1);
+  });
+  /** A soft rain hiss: looped, filtered noise made in the page. */
+  function rainOn() {
+    var ctx = engine.ctx;
+    var len = ctx.sampleRate * 3;
+    var buf = ctx.createBuffer(1, len, ctx.sampleRate);
+    var d = buf.getChannelData(0);
+    var last = 0;
+    for (var i = 0; i < len; i++) { var w = Math.random() * 2 - 1; last = (last + 0.03 * w) / 1.03; d[i] = last * 2.5 + w * 0.2; }
+    var src = ctx.createBufferSource();
+    src.buffer = buf;
+    src.loop = true;
+    var hp = ctx.createBiquadFilter();
+    hp.type = 'highpass';
+    hp.frequency.value = 350;
+    var lp = ctx.createBiquadFilter();
+    lp.type = 'lowpass';
+    lp.frequency.value = 5200;
+    var gain = ctx.createGain();
+    gain.gain.value = 0;
+    src.connect(hp);
+    hp.connect(lp);
+    lp.connect(gain);
+    gain.connect(ctx.destination);
+    gain.gain.setTargetAtTime(vol * 0.45, ctx.currentTime, 0.8);
+    src.start();
+    rain = { src: src, gain: gain };
+  }
+  function rainOff() {
+    var r = rain;
+    rain = null;
+    r.gain.gain.setTargetAtTime(0, engine.ctx.currentTime, 0.4);
+    setTimeout(function () { r.src.stop(); }, 2500);
+  }
+  $('rain-btn').addEventListener('click', function () {
+    unlock();
+    if (rain) rainOff(); else rainOn();
+    $('rain').hidden = !rain;
+    $('rain-btn').setAttribute('aria-pressed', String(!!rain));
+  });
+  // 番茄钟: a countdown by the clock (a background tab's slow timers do not stretch it); a chime only if sound is on.
+  var mode = 'focus';
+  var left = D.focus;
+  var endAt = 0;
+  var tick = null;
+  function fmt(s) { return pad(Math.floor(s / 60)) + ':' + pad(s % 60); }
+  function draw() {
+    $('clock').textContent = fmt(left);
+    $('pomo').setAttribute('data-mode', mode);
+    $('pomo-label').textContent = mode === 'focus' ? '专注 · 修完这段代码就去谈恋爱' : '休息 · 去阳台吹五分钟海风';
+    $('pomo-go').textContent = tick ? '⏸ 暂停' : left === (mode === 'focus' ? D.focus : D.rest) ? '▶ 开始' : '▶ 继续';
+    document.title = tick ? fmt(left) + ' · ' + baseTitle : baseTitle;
+  }
+  function step() {
+    left = Math.max(0, Math.round((endAt - Date.now()) / 1000));
+    if (left === 0) {
+      clearInterval(tick);
+      tick = null;
+      $('pomo-done').textContent = mode === 'focus' ? '🍅 时间到！站起来走走，休息五分钟。' : '☕ 休息结束，回来接着修。';
+      $('pomo-done').hidden = false;
+      if (unlocked) engine.sfx('ending');
+      mode = mode === 'focus' ? 'rest' : 'focus';
+      left = mode === 'focus' ? D.focus : D.rest;
+    }
+    draw();
+  }
+  $('pomo-go').addEventListener('click', function () {
+    if (tick) { clearInterval(tick); tick = null; } else { $('pomo-done').hidden = true; endAt = Date.now() + left * 1000; tick = setInterval(step, 250); }
+    draw();
+  });
+  $('pomo-reset').addEventListener('click', function () {
+    clearInterval(tick);
+    tick = null;
+    mode = 'focus';
+    left = D.focus;
+    $('pomo-done').hidden = true;
+    draw();
+  });
+  show(0);
+  state();
+  draw();
+  $('app').hidden = false;
+})();</script>
+</body>
+</html>

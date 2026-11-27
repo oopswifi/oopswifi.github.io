@@ -33,6 +33,8 @@ Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) i
 - [折一架海風紙飛機（繁體中文）](https://oopswifi.github.io/plane-hant.html): 同一页的繁体中文版 / the same page in Traditional Chinese
 - [周五 17:59，HR 叫你进小会议室](https://oopswifi.github.io/hr.html): 序章开场的 30 秒打工人小剧场和黑话翻译 / the prologue's Friday layoff in 30 seconds, with an office-jargon dictionary
 - [週五 17:59（繁體中文）](https://oopswifi.github.io/hr-hant.html): 同一页的繁体中文版 / the same page in Traditional Chinese
+- [修网线电台](https://oopswifi.github.io/ost.html): 游戏原声的网页电台和 25 分钟番茄钟，在浏览器里实时合成，点一下才出声 / the soundtrack as a browser synth radio with a 25-minute focus timer, silent until tapped
+- [修網線電臺（繁體中文）](https://oopswifi.github.io/ost-hant.html): 同一个电台的繁体中文版 / the same radio in Traditional Chinese
 - [Mandarin reading practice](https://oopswifi.github.io/mandarin.html): 给学中文的成年人的阅读课：序章开场，拼音、英文和简繁 / a reading lesson for adult learners: the opening scene with pinyin, English, Simplified and Traditional
 - [「你，单身吗？」](https://oopswifi.github.io/choice.html): 序章里总导演的问题，不进游戏也能回答 / the director's question from the prologue, playable without the game
 - [「你，單身嗎？」（繁體中文）](https://oopswifi.github.io/choice-hant.html): 同一个问题的繁体中文版 / the same question in Traditional Chinese
