@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-MXIyuO1YdCRnOezUbkTfo8SUAKQ2iBM05CoeTGv8j8Y='">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="3;url=/?ref=lost">
+<title>404 · 网线被拔了 · 糟了！我只是来恋综修网线的</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; font-family: -apple-system, "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "Microsoft JhengHei", sans-serif; color: #343a40; background: #fff5f8; }
+  main { padding: 24px; }
+  .code { margin: 0; font-size: 56px; font-weight: 800; color: #ff6b9d; letter-spacing: .08em; }
+  h1 { margin: 4px 0 10px; font-size: 26px; color: #c2255c; }
+  p { margin: 0 0 22px; font-size: 17px; }
+  .btn { display: inline-block; padding: 12px 26px; border-radius: 999px; font-size: 18px; font-weight: 700; text-decoration: none; background: #ff6b9d; color: #fff; }
+</style>
+</head>
+<body>
+<main>
+<p class="code">404</p>
+<h1 data-hant="網線被拔了">网线被拔了</h1>
+<p data-hant="這個地址沒接上，正在把你送回片場……">这个地址没接上，正在把你送回片场……</p>
+<a id="go" class="btn" href="/?ref=lost" data-hant="回到免費試玩">回到免费试玩</a>
+</main>
+<script>function lostTarget(base, pages, pathname, search, hash) {
+	var p = pathname;
+	try {
+		p = decodeURIComponent(p);
+	} catch (e) {}
+	if (p.indexOf(base) === 0) p = p.slice(base.length);
+	p = p.toLowerCase().replace(/[^a-z0-9]+$/, "").replace(/\.html?$/, "").replace(/[^a-z0-9]+$/, "");
+	var q = search.length > 1 ? search : "";
+	if (!/[?&](ref|utm_source)=/.test(q)) q += (q ? "&" : "?") + "ref=lost";
+	return base + (pages.indexOf(p) >= 0 ? p + ".html" : "") + q + hash;
+}
+(function () {
+  var langs = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).map(function (l) { return String(l).toLowerCase(); });
+  for (var i = 0; i < langs.length; i++) {
+    var l = langs[i];
+    if (/^zh-(hant|tw|hk|mo)\b/.test(l) || (/^yue\b/.test(l) && l.indexOf('hans') < 0)) {
+      document.documentElement.lang = 'zh-Hant';
+      document.title = document.title.replace('网线被拔了', '網線被拔了');
+      var els = document.querySelectorAll('[data-hant]');
+      for (var j = 0; j < els.length; j++) els[j].textContent = els[j].getAttribute('data-hant');
+      break;
+    }
+    if (/^(zh|yue)\b/.test(l)) break;
+  }
+  var to = lostTarget("/", ["about","press","choice","choice-hant"], location.pathname, location.search, location.hash);
+  document.getElementById('go').href = to;
+  setTimeout(function () { location.replace(to); }, 900);
+})();</script>
+</body>
+</html>
