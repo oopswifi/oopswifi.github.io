@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-0xOtMLb37kdTvF77XkoZR5hlq91ssbZ6fg4MHuFkPxg='">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-d6M1I7LOfSvIDePCNVosCqz/9iYFHIysRfAfSzUh2hM='">
 <meta name="robots" content="noindex">
 <title>免费试玩 · 糟了！我只是来恋综修网线的</title>
     <link rel="canonical" href="https://oopswifi.github.io/embed.html">
@@ -23,11 +23,15 @@
 </a>
 <a class="tab" href="/?ref=embed" target="_blank" rel="noopener">新标签页打开 ↗</a>
 <script>(function () {
-  if (innerWidth >= 560 && innerHeight >= 300) return;
   var a = document.getElementById('play');
-  a.target = '_blank';
-  a.rel = 'noopener';
-  document.documentElement.className = 'small';
+  function fit() {
+    var small = innerWidth < 560 || innerHeight < 300;
+    if (small) { a.target = '_blank'; a.rel = 'noopener'; } else { a.removeAttribute('target'); a.removeAttribute('rel'); }
+    document.documentElement.className = small ? 'small' : '';
+  }
+  fit();
+  addEventListener('resize', fit);
+  a.addEventListener('click', fit);
 })();</script>
 </body>
 </html>

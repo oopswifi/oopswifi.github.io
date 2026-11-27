@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-zlhwRxPTVICtvWPkMmTdm29+OSMYggjoSzJZ+4oynxQ='">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-SuoJG0xApg1eADrbIbkOAI0vJWWwJ9RtaWcray/tobk='">
 <meta name="robots" content="noindex">
 <meta http-equiv="refresh" content="3;url=/?ref=lost">
 <title>404 · 网线被拔了 · 糟了！我只是来恋综修网线的</title>
@@ -27,7 +27,18 @@
 <a id="go" class="btn" href="/?ref=lost" data-hant="回到免費試玩">回到免费试玩</a>
 <p class="more"><a href="https://github.com/oopswifi/oopswifi.github.io/discussions" data-hant="玩家討論區（GitHub Discussions）">玩家讨论区（GitHub Discussions）</a></p>
 </main>
-<script>function lostTarget(base, pages, pathname, search, hash) {
+<script>function shortTarget(target, search, hash) {
+	var cut = target.indexOf("#");
+	var own = cut < 0 ? "" : target.slice(cut);
+	var rest = cut < 0 ? target : target.slice(0, cut);
+	var mark = rest.indexOf("?");
+	var q = search.length > 1 ? search : "";
+	(mark < 0 ? "" : rest.slice(mark + 1)).split("&").forEach(function(p) {
+		if (p && !new RegExp("[?&]" + p.split("=")[0] + "=").test(q)) q += (q ? "&" : "?") + p;
+	});
+	return (mark < 0 ? rest : rest.slice(0, mark)) + q + (hash.length > 1 ? hash : own);
+}
+function lostTarget(base, pages, pathname, search, hash, shorts) {
 	var p = pathname;
 	try {
 		p = decodeURIComponent(p);
@@ -36,6 +47,7 @@
 	p = p.toLowerCase().replace(/[^a-z0-9]+$/, "").replace(/\.html?$/, "").replace(/[^a-z0-9]+$/, "");
 	var q = search.length > 1 ? search : "";
 	if (!/[?&](ref|utm_source)=/.test(q)) q += (q ? "&" : "?") + "ref=lost";
+	if (shorts && Object.prototype.hasOwnProperty.call(shorts, p)) return base + shortTarget(shorts[p], q, hash);
 	return base + (pages.indexOf(p) >= 0 ? p + ".html" : "") + q + hash;
 }
 (function () {
@@ -51,7 +63,7 @@
     }
     if (/^(zh|yue)\b/.test(l)) break;
   }
-  var to = lostTarget("/", ["about","press","trailer","guide","guide-hant","chat","chat-hant","plane","plane-hant","hr","hr-hant","ost","ost-hant","mandarin","choice","choice-hant","wiki/guangmao","wiki/guangmao-hant","wiki/router-login","wiki/router-login-hant","wiki/wifi-password","wiki/wifi-password-hant","embed"], location.pathname, location.search, location.hash);
+  var to = lostTarget("/", ["about","press","trailer","guide","guide-hant","chat","chat-hant","plane","plane-hant","hr","hr-hant","ost","ost-hant","mandarin","choice","choice-hant","wiki/guangmao","wiki/guangmao-hant","wiki/router-login","wiki/router-login-hant","wiki/wifi-password","wiki/wifi-password-hant","embed"], location.pathname, location.search, location.hash, {"play":"","demo":"","tw":"?lang=zh-Hant","hk":"?lang=zh-Hant","en":"about.html#en"});
   document.getElementById('go').href = to;
   setTimeout(function () { location.replace(to); }, 900);
 })();</script>

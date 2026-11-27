@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-hdbz4zqeeWuLfZWDc4s4oNvuhzXmWxQfJBzBpBAFLD4='">
 <title>心跳海岸線·嘉賓群（7） · 糟了！我只是來戀綜修網線的</title>
-    <meta name="description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回復。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。" itemprop="description">
+    <meta name="description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回覆。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。" itemprop="description">
     <link rel="canonical" href="https://oopswifi.github.io/chat-hant.html">
     <link rel="alternate" hreflang="zh-Hans" href="https://oopswifi.github.io/chat.html">
     <link rel="alternate" hreflang="zh-Hant" href="https://oopswifi.github.io/chat-hant.html">
@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="糟了！我只是來戀綜修網線的">
     <meta property="og:title" content="深夜嘉賓群：有人撤回了一條訊息 · 糟了！我只是來戀綜修網線的">
-    <meta property="og:description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回復。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。">
+    <meta property="og:description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回覆。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。">
     <meta property="og:url" content="https://oopswifi.github.io/chat-hant.html">
     <meta property="og:image" content="https://oopswifi.github.io/og-cover.jpg">
     <meta property="og:image:width" content="1200">
@@ -29,7 +29,7 @@
     <meta itemprop="image" content="https://oopswifi.github.io/og-cover.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="深夜嘉賓群：有人撤回了一條訊息 · 糟了！我只是來戀綜修網線的">
-    <meta name="twitter:description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回復。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。">
+    <meta name="twitter:description" content="戀綜錄製第一晚，嘉賓群裡有人撤回了一條訊息……45 秒群聊小劇場，換你來回覆。來自《糟了！我只是來戀綜修網線的》，序章和第一集免費，瀏覽器打開就能玩。">
     <meta name="twitter:image" content="https://oopswifi.github.io/og-cover.jpg">
 <style>
   * { box-sizing: border-box; }
@@ -66,10 +66,16 @@
   .pm.sys.thought span { background: none; color: #5c7cfa; font-style: italic; font-size: 14px; }
   .panel { padding: 10px 10px max(12px, env(safe-area-inset-bottom)); background: #f7f7f7; border-top: 1px solid #ddd; }
   .panel[hidden] { display: none; }
+  /* When the phone is short (held sideways, #757), the replies and the ending's buttons scroll in their own box, so
+     every one stays within reach of a finger; the chat keeps a strip above them. */
+  .panel, .stamp { overflow-y: auto; overscroll-behavior: contain; }
+  .panel { flex: 0 1 auto; min-height: 0; }
   .panel p { margin: 0 0 8px; color: #555; font-size: 13px; text-align: center; }
   .pick { display: flex; align-items: center; gap: 8px; width: 100%; margin: 6px 0; padding: 10px 12px; min-height: 46px; border: 1px solid #d0d0d0; border-radius: 10px; background: #fff; color: #191919; font: inherit; font-size: 15px; text-align: left; cursor: pointer; }
   .key { flex: 0 0 22px; height: 22px; border-radius: 50%; background: #f06595; color: #fff; font-size: 13px; font-weight: 700; text-align: center; line-height: 22px; }
-  .stamp { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; background: rgba(20, 21, 31, .82); color: #fff; text-align: center; }
+  .stamp { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 24px; background: rgba(20, 21, 31, .82); color: #fff; text-align: center; }
+  .stamp > :first-child { margin-top: auto; }
+  .stamp > :last-child { margin-bottom: auto; }
   .stamp[hidden] { display: none; }
   .stamp .big { padding: 6px 18px; border: 3px solid #ff6b6b; border-radius: 10px; color: #ff6b6b; font-size: 26px; font-weight: 900; transform: rotate(-6deg); }
   .stamp p { margin: 0; color: #dee2e6; font-size: 14px; }
@@ -79,6 +85,18 @@
   footer { padding: 6px 12px 10px; background: #f7f7f7; color: #868e96; font-size: 11px; text-align: center; }
   footer a { color: #868e96; }
   noscript p { margin: 6px 0; }
+  @media (max-height: 480px) {
+    .wrap { max-width: 760px; }
+    .top { padding-top: max(4px, env(safe-area-inset-top)); padding-bottom: 2px; }
+    header { padding: 6px 14px; }
+    .list { min-height: 64px; padding-top: 8px; padding-bottom: 8px; }
+    .panel { padding-top: 6px; }
+    .panel p { margin-bottom: 4px; }
+    #picks:not([hidden]) { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); column-gap: 8px; align-content: start; }
+    #picks p { grid-column: 1 / -1; }
+    .pick { margin: 3px 0; min-height: 44px; }
+    .stamp { padding: 12px 24px; gap: 8px; }
+  }
   @media (prefers-reduced-motion: reduce) { .pm.new { animation: none; } .bubble.typing i { animation: none; } }
 </style>
 </head>

@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-Ic8s4xYDkd92ViA1rBIr2uIW+avjUXLdCDwqjfSnVzI='">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-VwWQEUE3cDuXRWN2dtAP9TbPHyt5fFg3cCzGKu6CpfI='">
 <title>修網線電臺 · 糟了！我只是來戀綜修網線的</title>
-    <meta name="description" content="「修網線電臺」：《糟了！我只是來戀綜修網線的》的遊戲原聲，在瀏覽器裡實時合成的 8 首合成器 BGM，配一個 25 分鐘番茄鍾，寫程式碼、自習的時候開著。點一下才出聲。序章和第一集免費試玩。" itemprop="description">
+    <meta name="description" content="「修網線電臺」：《糟了！我只是來戀綜修網線的》的遊戲原聲，在瀏覽器裡即時合成的 8 首合成器 BGM，配一個 25 分鐘番茄鐘，寫程式碼、自習的時候開著。點一下才出聲。序章和第一集免費試玩。" itemprop="description">
     <link rel="canonical" href="https://oopswifi.github.io/ost-hant.html">
     <link rel="alternate" hreflang="zh-Hans" href="https://oopswifi.github.io/ost.html">
     <link rel="alternate" hreflang="zh-Hant" href="https://oopswifi.github.io/ost-hant.html">
@@ -18,7 +18,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="糟了！我只是來戀綜修網線的">
     <meta property="og:title" content="修網線電臺 · 糟了！我只是來戀綜修網線的">
-    <meta property="og:description" content="「修網線電臺」：《糟了！我只是來戀綜修網線的》的遊戲原聲，在瀏覽器裡實時合成的 8 首合成器 BGM，配一個 25 分鐘番茄鍾，寫程式碼、自習的時候開著。點一下才出聲。序章和第一集免費試玩。">
+    <meta property="og:description" content="「修網線電臺」：《糟了！我只是來戀綜修網線的》的遊戲原聲，在瀏覽器裡即時合成的 8 首合成器 BGM，配一個 25 分鐘番茄鐘，寫程式碼、自習的時候開著。點一下才出聲。序章和第一集免費試玩。">
     <meta property="og:url" content="https://oopswifi.github.io/ost-hant.html">
     <meta property="og:image" content="https://oopswifi.github.io/og-cover.jpg">
     <meta property="og:image:width" content="1200">
@@ -29,7 +29,7 @@
     <meta itemprop="image" content="https://oopswifi.github.io/og-cover.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="修網線電臺 · 糟了！我只是來戀綜修網線的">
-    <meta name="twitter:description" content="「修網線電臺」：《糟了！我只是來戀綜修網線的》的遊戲原聲，在瀏覽器裡實時合成的 8 首合成器 BGM，配一個 25 分鐘番茄鍾，寫程式碼、自習的時候開著。點一下才出聲。序章和第一集免費試玩。">
+    <meta name="twitter:description" content="「修網線電臺」：《糟了！我只是來戀綜修網線的》的遊戲原聲，在瀏覽器裡即時合成的 8 首合成器 BGM，配一個 25 分鐘番茄鐘，寫程式碼、自習的時候開著。點一下才出聲。序章和第一集免費試玩。">
     <meta name="twitter:image" content="https://oopswifi.github.io/og-cover.jpg">
 <style>
   * { box-sizing: border-box; }
@@ -81,10 +81,10 @@
   <nav class="langs" aria-label="简体 / 繁體"><a href="./ost.html" hreflang="zh-Hans" lang="zh-Hans">简体</a><a href="./ost-hant.html" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體</a></nav>
   <h1>📻 修網線電臺</h1>
   <p class="lead">戀綜片場的合成器原聲，寫程式碼、自習、發呆的時候開著。點 ▶ 才會出聲。</p>
-  <noscript><p class="card">電臺要用 JavaScript 在瀏覽器裡實時合成音樂，打開 JavaScript 就能聽。</p></noscript>
+  <noscript><p class="card">電臺要用 JavaScript 在瀏覽器裡即時合成音樂，打開 JavaScript 就能聽。</p></noscript>
   <div id="app" hidden>
     <section id="player" class="card" data-state="idle" aria-label="播放器">
-      <p class="now"><span id="no">01</span> / 08<b id="name">片頭 · 心跳海岸線</b></p>
+      <p class="now" aria-live="polite" aria-atomic="true"><span id="no">01</span> / 08<b id="name">片頭 · 心跳海岸線</b></p>
       <div class="controls">
         <button id="prev" type="button" aria-label="上一首">⏮</button>
         <button id="play" type="button" class="big" aria-label="播放">▶</button>
@@ -96,15 +96,15 @@
       </div>
     </section>
     <ol id="tracks" aria-label="曲目"></ol>
-    <section id="pomo" class="card" data-mode="focus" aria-label="番茄鍾">
-      <h2>🍅 25 分鐘番茄鍾</h2>
+    <section id="pomo" class="card" data-mode="focus" aria-label="番茄鐘">
+      <h2>🍅 25 分鐘番茄鐘</h2>
       <div id="clock" class="clock" role="timer">25:00</div>
       <p id="pomo-label">專注 · 修完這段程式碼就去談戀愛</p>
       <div class="row"><button id="pomo-go" class="chip" type="button">▶ 開始</button><button id="pomo-reset" class="chip" type="button">↺ 重置</button></div>
       <p id="pomo-done" role="status" hidden></p>
     </section>
   </div>
-  <p class="note">音樂和遊戲裡一樣，由程式在你的瀏覽器裡實時合成：沒有音訊文件，也沒有版權音樂。切到別的標籤頁也會接著放。</p>
+  <p class="note">音樂和遊戲裡一樣，由程式在你的瀏覽器裡即時合成：沒有音訊檔案，也沒有版權音樂。切到別的標籤頁也會接著放。</p>
   <a class="go" href="./?ref=ost&lang=zh-Hant">來自互動戀愛喜劇《糟了！我只是來戀綜修網線的》 · 序章 + 第一集免費試玩 ▶</a>
   <footer>糟了！我只是來戀綜修網線的 · 畫面由 AI 生成 · 本作所有角色均為成年人，劇情純屬虛構 · <a href="./about.html#zh-hant">關於</a></footer>
 </main>
@@ -412,14 +412,18 @@ class AudioEngine {
   var current = 0;
   var rain = null;
   var baseTitle = document.title;
-  engine.setVolumes(vol, 0.7);
+  // The 番茄鐘's chime is a sound effect: it follows the volume slider (about the game's level at 60 %, silent at 0, #771).
+  function volumes() { engine.setVolumes(vol, Math.min(0.8, vol * 1.2)); }
+  volumes();
   /** The first tap creates the AudioContext; until then the page makes no sound and holds no audio. */
   function unlock() {
     if (unlocked) return;
     unlocked = true;
     engine.unlock();
-    // The game falls silent in a background tab; the radio goes on, since the visitor pressed play.
-    document.addEventListener('visibilitychange', function () { if ((playing || rain) && engine.ctx) engine.ctx.resume(); });
+    // The game falls silent in a background tab; the radio goes on, since the visitor pressed play, and so does a running
+    // 番茄鐘, whose chime must sound when time is up (#771). What the engine suspends then is resumed once it has landed:
+    // a resume() right after its suspend() can come first.
+    engine.ctx.addEventListener('statechange', function () { if (engine.ctx.state === 'suspended' && (playing || rain || tick)) engine.ctx.resume(); });
   }
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function show(k) {
@@ -465,7 +469,7 @@ class AudioEngine {
   });
   $('vol').addEventListener('input', function () {
     vol = Number($('vol').value) / 100;
-    engine.setVolumes(vol, 0.7);
+    volumes();
     if (rain) rain.gain.gain.setTargetAtTime(vol * 0.45, engine.ctx.currentTime, 0.1);
   });
   /** A soft rain hiss: looped, filtered noise made in the page. */
@@ -507,39 +511,75 @@ class AudioEngine {
     $('rain').hidden = !rain;
     $('rain-btn').setAttribute('aria-pressed', String(!!rain));
   });
-  // 番茄鍾: a countdown by the clock (a background tab's slow timers do not stretch it); a chime only if sound is on.
+  // 番茄鐘: a countdown by the clock (a background tab's slow timers do not stretch it). Its start is a tap, so it opens
+  // sound for the chime; the volume slider at 0 keeps the timer silent. A background tab learns that time is up from
+  // its title, which says so until the page is seen again, and the chime is woken by the audio clock, which Chrome does
+  // not slow down in a hidden tab the way it slows its timers (#771).
   var mode = 'focus';
   var left = D.focus;
   var endAt = 0;
   var tick = null;
+  var alarm = null;
+  var up = '';
   function fmt(s) { return pad(Math.floor(s / 60)) + ':' + pad(s % 60); }
   function draw() {
     $('clock').textContent = fmt(left);
     $('pomo').setAttribute('data-mode', mode);
     $('pomo-label').textContent = mode === 'focus' ? '專注 · 修完這段程式碼就去談戀愛' : '休息 · 去陽臺吹五分鐘海風';
     $('pomo-go').textContent = tick ? '⏸ 暫停' : left === (mode === 'focus' ? D.focus : D.rest) ? '▶ 開始' : '▶ 繼續';
-    document.title = tick ? fmt(left) + ' · ' + baseTitle : baseTitle;
+    document.title = tick ? fmt(left) + ' · ' + baseTitle : up ? up + ' · ' + baseTitle : baseTitle;
+  }
+  /** A silent source that ends when the time is up: its end comes on the audio clock, on time in a background tab. */
+  function wakeAt(seconds) {
+    var ctx = engine.ctx;
+    if (!ctx || !ctx.createConstantSource) return;
+    var quiet = ctx.createGain();
+    quiet.gain.value = 0;
+    quiet.connect(ctx.destination);
+    alarm = ctx.createConstantSource();
+    alarm.connect(quiet);
+    alarm.onended = function () { endAt = Math.min(endAt, Date.now()); step(); };
+    alarm.start();
+    alarm.stop(ctx.currentTime + seconds);
+  }
+  function unwake() {
+    if (!alarm) return;
+    alarm.onended = null;
+    try { alarm.stop(); } catch (e) { /* already ended */ }
+    alarm = null;
   }
   function step() {
     left = Math.max(0, Math.round((endAt - Date.now()) / 1000));
-    if (left === 0) {
+    if (left === 0 && tick) {
       clearInterval(tick);
       tick = null;
+      unwake();
       $('pomo-done').textContent = mode === 'focus' ? '🍅 時間到！站起來走走，休息五分鐘。' : '☕ 休息結束，回來接著修。';
       $('pomo-done').hidden = false;
-      if (unlocked) engine.sfx('ending');
+      up = mode === 'focus' ? '🍅 時間到' : '☕ 休息結束';
+      engine.sfx('ending');
       mode = mode === 'focus' ? 'rest' : 'focus';
       left = mode === 'focus' ? D.focus : D.rest;
     }
     draw();
   }
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible' && up) { up = ''; draw(); } });
   $('pomo-go').addEventListener('click', function () {
-    if (tick) { clearInterval(tick); tick = null; } else { $('pomo-done').hidden = true; endAt = Date.now() + left * 1000; tick = setInterval(step, 250); }
+    up = '';
+    if (tick) { clearInterval(tick); tick = null; unwake(); } else {
+      unlock();
+      $('pomo-done').hidden = true;
+      endAt = Date.now() + left * 1000;
+      tick = setInterval(step, 250);
+      wakeAt(left);
+    }
     draw();
   });
   $('pomo-reset').addEventListener('click', function () {
     clearInterval(tick);
     tick = null;
+    unwake();
+    up = '';
     mode = 'focus';
     left = D.focus;
     $('pomo-done').hidden = true;

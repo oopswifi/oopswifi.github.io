@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-xAcXhjuYS/YeS9qXV8F1lW6/k5DcSjOUQkT3IhwB7XU='">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-qR89fDm3M0kZw2r6UKwFVUh4n8Qt4jXAM/oWf4C1qNo='">
 <title>修网线电台 · 糟了！我只是来恋综修网线的</title>
     <meta name="description" content="「修网线电台」：《糟了！我只是来恋综修网线的》的游戏原声，在浏览器里实时合成的 8 首合成器 BGM，配一个 25 分钟番茄钟，写代码、自习的时候开着。点一下才出声。序章和第一集免费试玩。" itemprop="description">
     <link rel="canonical" href="https://oopswifi.github.io/ost.html">
@@ -84,7 +84,7 @@
   <noscript><p class="card">电台要用 JavaScript 在浏览器里实时合成音乐，打开 JavaScript 就能听。</p></noscript>
   <div id="app" hidden>
     <section id="player" class="card" data-state="idle" aria-label="播放器">
-      <p class="now"><span id="no">01</span> / 08<b id="name">片头 · 心跳海岸线</b></p>
+      <p class="now" aria-live="polite" aria-atomic="true"><span id="no">01</span> / 08<b id="name">片头 · 心跳海岸线</b></p>
       <div class="controls">
         <button id="prev" type="button" aria-label="上一首">⏮</button>
         <button id="play" type="button" class="big" aria-label="播放">▶</button>
@@ -412,14 +412,18 @@ class AudioEngine {
   var current = 0;
   var rain = null;
   var baseTitle = document.title;
-  engine.setVolumes(vol, 0.7);
+  // The 番茄钟's chime is a sound effect: it follows the volume slider (about the game's level at 60 %, silent at 0, #771).
+  function volumes() { engine.setVolumes(vol, Math.min(0.8, vol * 1.2)); }
+  volumes();
   /** The first tap creates the AudioContext; until then the page makes no sound and holds no audio. */
   function unlock() {
     if (unlocked) return;
     unlocked = true;
     engine.unlock();
-    // The game falls silent in a background tab; the radio goes on, since the visitor pressed play.
-    document.addEventListener('visibilitychange', function () { if ((playing || rain) && engine.ctx) engine.ctx.resume(); });
+    // The game falls silent in a background tab; the radio goes on, since the visitor pressed play, and so does a running
+    // 番茄钟, whose chime must sound when time is up (#771). What the engine suspends then is resumed once it has landed:
+    // a resume() right after its suspend() can come first.
+    engine.ctx.addEventListener('statechange', function () { if (engine.ctx.state === 'suspended' && (playing || rain || tick)) engine.ctx.resume(); });
   }
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function show(k) {
@@ -465,7 +469,7 @@ class AudioEngine {
   });
   $('vol').addEventListener('input', function () {
     vol = Number($('vol').value) / 100;
-    engine.setVolumes(vol, 0.7);
+    volumes();
     if (rain) rain.gain.gain.setTargetAtTime(vol * 0.45, engine.ctx.currentTime, 0.1);
   });
   /** A soft rain hiss: looped, filtered noise made in the page. */
@@ -507,39 +511,75 @@ class AudioEngine {
     $('rain').hidden = !rain;
     $('rain-btn').setAttribute('aria-pressed', String(!!rain));
   });
-  // 番茄钟: a countdown by the clock (a background tab's slow timers do not stretch it); a chime only if sound is on.
+  // 番茄钟: a countdown by the clock (a background tab's slow timers do not stretch it). Its start is a tap, so it opens
+  // sound for the chime; the volume slider at 0 keeps the timer silent. A background tab learns that time is up from
+  // its title, which says so until the page is seen again, and the chime is woken by the audio clock, which Chrome does
+  // not slow down in a hidden tab the way it slows its timers (#771).
   var mode = 'focus';
   var left = D.focus;
   var endAt = 0;
   var tick = null;
+  var alarm = null;
+  var up = '';
   function fmt(s) { return pad(Math.floor(s / 60)) + ':' + pad(s % 60); }
   function draw() {
     $('clock').textContent = fmt(left);
     $('pomo').setAttribute('data-mode', mode);
     $('pomo-label').textContent = mode === 'focus' ? '专注 · 修完这段代码就去谈恋爱' : '休息 · 去阳台吹五分钟海风';
     $('pomo-go').textContent = tick ? '⏸ 暂停' : left === (mode === 'focus' ? D.focus : D.rest) ? '▶ 开始' : '▶ 继续';
-    document.title = tick ? fmt(left) + ' · ' + baseTitle : baseTitle;
+    document.title = tick ? fmt(left) + ' · ' + baseTitle : up ? up + ' · ' + baseTitle : baseTitle;
+  }
+  /** A silent source that ends when the time is up: its end comes on the audio clock, on time in a background tab. */
+  function wakeAt(seconds) {
+    var ctx = engine.ctx;
+    if (!ctx || !ctx.createConstantSource) return;
+    var quiet = ctx.createGain();
+    quiet.gain.value = 0;
+    quiet.connect(ctx.destination);
+    alarm = ctx.createConstantSource();
+    alarm.connect(quiet);
+    alarm.onended = function () { endAt = Math.min(endAt, Date.now()); step(); };
+    alarm.start();
+    alarm.stop(ctx.currentTime + seconds);
+  }
+  function unwake() {
+    if (!alarm) return;
+    alarm.onended = null;
+    try { alarm.stop(); } catch (e) { /* already ended */ }
+    alarm = null;
   }
   function step() {
     left = Math.max(0, Math.round((endAt - Date.now()) / 1000));
-    if (left === 0) {
+    if (left === 0 && tick) {
       clearInterval(tick);
       tick = null;
+      unwake();
       $('pomo-done').textContent = mode === 'focus' ? '🍅 时间到！站起来走走，休息五分钟。' : '☕ 休息结束，回来接着修。';
       $('pomo-done').hidden = false;
-      if (unlocked) engine.sfx('ending');
+      up = mode === 'focus' ? '🍅 时间到' : '☕ 休息结束';
+      engine.sfx('ending');
       mode = mode === 'focus' ? 'rest' : 'focus';
       left = mode === 'focus' ? D.focus : D.rest;
     }
     draw();
   }
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible' && up) { up = ''; draw(); } });
   $('pomo-go').addEventListener('click', function () {
-    if (tick) { clearInterval(tick); tick = null; } else { $('pomo-done').hidden = true; endAt = Date.now() + left * 1000; tick = setInterval(step, 250); }
+    up = '';
+    if (tick) { clearInterval(tick); tick = null; unwake(); } else {
+      unlock();
+      $('pomo-done').hidden = true;
+      endAt = Date.now() + left * 1000;
+      tick = setInterval(step, 250);
+      wakeAt(left);
+    }
     draw();
   });
   $('pomo-reset').addEventListener('click', function () {
     clearInterval(tick);
     tick = null;
+    unwake();
+    up = '';
     mode = 'focus';
     left = D.focus;
     $('pomo-done').hidden = true;

@@ -62,6 +62,8 @@
   ul.offers { padding-left: 1.2em; }
   ul.offers li { margin: 8px 0; }
   .cta { display: block; margin: 20px 0 8px; padding: 15px; border-radius: 999px; background: linear-gradient(90deg, #f06595, #ff922b); color: #fff; text-align: center; font-size: 18px; font-weight: 700; text-decoration: none; }
+  .cta.hant { display: none; }
+  #s-hant:checked ~ main .cta.hant { display: block; }
   .tip { padding: 12px 14px; border-radius: 10px; background: #e7f5ff; font-size: 15px; }
   footer { margin-top: 30px; color: #868e96; font-size: 13px; text-align: center; }
   footer a { color: #495057; }
@@ -202,7 +204,8 @@
     </tbody>
   </table>
 
-  <a class="cta" href="./?ref=mandarin-read">▶ Play the scene: free, in your browser</a>
+  <a class="cta hans" href="./?ref=mandarin-read">▶ Play the scene: free, in your browser</a>
+  <a class="cta hant" href="./?ref=mandarin-read&lang=zh-Hant">▶ Play the scene in Traditional characters (<span lang="zh-Hant">繁體</span>): free, in your browser</a>
   <p class="tip"><b>Tips.</b> The game is all in Chinese, with no English. In the game you get 8 seconds to answer HR: on the title screen open <span lang="zh-Hans">设置</span> (settings) and switch off <span lang="zh-Hans">限时选择</span> (timed choices) to read at your own pace. The <span lang="zh-Hans">简 / 繁</span> button on the title screen switches between Simplified and Traditional. The prologue and episode 1 are free.</p>
   <p class="en">Reading practice from a game, not a course or a certified level. The Chinese is the game's own text. The pinyin gives each syllable its dictionary tone, except <span lang="zh-Hans">一</span> and <span lang="zh-Hans">不</span>, which are marked as they are said before another tone. The English is a plain gloss.</p>
   <footer>Oops! I&#39;m Just Here to Fix the Wi-Fi · The images are AI-generated; all characters are fictional adults. · <a href="./about.html#en">About</a></footer>

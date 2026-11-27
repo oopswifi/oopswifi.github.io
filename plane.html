@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-AQMYBS9xBax13WdnvB/gUq6sur9mj+Kzbm2xyOcYTHU='">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-Sbg0wEb1/aPjkpXsosO6tY8tscgw4LeBKA1lEN5TXYc='">
 <title>折一架海风纸飞机 · 糟了！我只是来恋综修网线的</title>
     <meta name="description" content="恋综别墅的夜里，每个人都会往一个阳台扔一架纸飞机。挑一句心里话，折一架送给朋友。来自《糟了！我只是来恋综修网线的》，序章和第一集免费，浏览器打开就能玩。" itemprop="description">
     <link rel="canonical" href="https://oopswifi.github.io/plane.html">
@@ -103,7 +103,7 @@
     <div id="out" class="out" hidden>
       <p>这架纸飞机的链接，发给想送的人：</p>
       <input id="link" readonly aria-label="纸飞机的链接">
-      <div class="row"><button id="copy" class="btn soft" type="button" data-done="已复制">复制链接</button><a id="see" class="btn soft" href="./plane.html">看看收到的样子</a></div>
+      <div class="row"><button id="copy" class="btn soft" type="button" data-done="已复制" data-manual="已选中，请手动复制" aria-live="polite">复制链接</button><a id="see" class="btn soft" href="./plane.html">看看收到的样子</a></div>
       <p class="small">链接里只有两个数字：哪一句、哪个署名。这里不能写别的字，谁也没法借它发奇怪的内容。</p>
     </div>
     <a class="btn soft" href="./?ref=plane">▶ 去《心跳海岸线》看看这架纸飞机的故事（免费试玩）</a>
@@ -168,11 +168,21 @@
     $('out').hidden = false;
     $('link').select();
   });
+  // 已复制 only after a copy worked (#756): without the Clipboard API, or where it is refused (some in-app browsers), the
+  // selected link is copied the old way; when that fails too, the link stays selected for the visitor to copy.
   $('copy').addEventListener('click', function () {
-    var b = this;
-    var done = function () { b.textContent = b.getAttribute('data-done'); };
-    if (navigator.clipboard) navigator.clipboard.writeText($('link').value).then(done, function () { $('link').select(); });
-    else { $('link').select(); done(); }
+    var b = this, link = $('link');
+    var said = function (ok) { b.textContent = b.getAttribute(ok ? 'data-done' : 'data-manual'); };
+    var old = function () {
+      link.focus();
+      link.select();
+      link.setSelectionRange(0, link.value.length);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+      said(ok);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link.value).then(function () { said(true); }, old);
+    else old();
   });
 })();</script>
 </body>
