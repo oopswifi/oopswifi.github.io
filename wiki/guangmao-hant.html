@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'">
+<title>光貓指示燈速查：LOS 紅燈、PON 閃爍是什麼意思，寬頻報修電話 · 修網線百科</title>
+    <meta name="description" content="光貓上的 POWER、PON、LOS、LAN 燈怎麼看：PON 常亮、LOS 不亮是正常；LOS 亮紅燈是光訊號出了問題，先查黃色光纖；報修打電信 10000、移動 10086、聯通 10010、廣電 10099。每一條都附來源。" itemprop="description">
+    <link rel="canonical" href="https://oopswifi.github.io/wiki/guangmao-hant.html">
+    <link rel="alternate" hreflang="zh-Hans" href="https://oopswifi.github.io/wiki/guangmao.html">
+    <link rel="alternate" hreflang="zh-Hant" href="https://oopswifi.github.io/wiki/guangmao-hant.html">
+    <link rel="alternate" hreflang="x-default" href="https://oopswifi.github.io/wiki/guangmao.html">
+    <meta name="theme-color" content="#14151f">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="糟了！我只是來戀綜修網線的">
+    <meta property="og:title" content="光貓指示燈速查：LOS 紅燈、PON 閃爍是什麼意思，寬頻報修電話 · 修網線百科">
+    <meta property="og:description" content="光貓上的 POWER、PON、LOS、LAN 燈怎麼看：PON 常亮、LOS 不亮是正常；LOS 亮紅燈是光訊號出了問題，先查黃色光纖；報修打電信 10000、移動 10086、聯通 10010、廣電 10099。每一條都附來源。">
+    <meta property="og:url" content="https://oopswifi.github.io/wiki/guangmao-hant.html">
+    <meta property="og:image" content="https://oopswifi.github.io/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="糟了！我只是來戀綜修網線的：五位女嘉賓的合照">
+    <meta property="og:locale" content="zh_TW">
+    <meta itemprop="name" content="光貓指示燈速查：LOS 紅燈、PON 閃爍是什麼意思，寬頻報修電話 · 修網線百科">
+    <meta itemprop="image" content="https://oopswifi.github.io/og-cover.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="光貓指示燈速查：LOS 紅燈、PON 閃爍是什麼意思，寬頻報修電話 · 修網線百科">
+    <meta name="twitter:description" content="光貓上的 POWER、PON、LOS、LAN 燈怎麼看：PON 常亮、LOS 不亮是正常；LOS 亮紅燈是光訊號出了問題，先查黃色光纖；報修打電信 10000、移動 10086、聯通 10010、廣電 10099。每一條都附來源。">
+    <meta name="twitter:image" content="https://oopswifi.github.io/og-cover.jpg">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"光貓 LOS 燈亮紅燈是什麼意思？","acceptedAnswer":{"@type":"Answer","text":"LOS 是光訊號燈，不亮才正常。亮紅燈或者紅燈慢閃，說明光貓收不到正常的光訊號：先把黃色細光纖兩頭插緊、彎折的地方捋順，再斷電重啟光貓；還是紅燈，就打運營商的客服熱線報修。"}},{"@type":"Question","name":"PON 燈一直閃是怎麼回事？","acceptedAnswer":{"@type":"Answer","text":"PON 燈快閃，表示光貓正在和運營商的設備建立連線，連上以後變成常亮。一直閃不停，先查光纖有沒有彎折，再重啟光貓，還不行就報修。"}},{"@type":"Question","name":"光貓的燈都正常，為什麼還是上不了網？","acceptedAnswer":{"@type":"Answer","text":"POWER、PON 常亮，LOS 不亮，說明光貓和運營商之間是通的。接著查網線是不是插在光貓的 LAN1 口；用了路由器的話，先用電腦直連光貓的 LAN1 口試試；還不行，把光貓斷電 5 分鐘再通電。"}},{"@type":"Question","name":"寬頻報修打什麼電話？","acceptedAnswer":{"@type":"Answer","text":"打寬頻運營商的客服熱線：中國電信 10000，中國移動 10086，中國聯通 10010，中國廣電 10099。"}}]}</script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #14151f; color: #e9ecef; font-family: -apple-system, "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", sans-serif; line-height: 1.75; }
+  main { max-width: 860px; margin: 0 auto; padding: max(14px, env(safe-area-inset-top)) 16px 40px; }
+  .langs { display: flex; justify-content: flex-end; gap: 6px; margin: 0 0 10px; }
+  .langs a { min-width: 56px; padding: 6px 14px; border: 1px solid #495057; border-radius: 999px; color: #ced4da; text-align: center; text-decoration: none; font-size: 15px; }
+  .langs a[aria-current] { border-color: #f1f3f5; background: #f1f3f5; color: #c2255c; font-weight: 700; }
+  a { color: #74c0fc; }
+  .series { margin: 0; color: #ffd43b; font-size: 14px; letter-spacing: 2px; }
+  h1 { margin: 2px 0 12px; font-size: clamp(24px, 5vw, 32px); line-height: 1.3; }
+  h1 small { display: block; margin-top: 6px; font-size: 16px; font-weight: 400; color: #adb5bd; }
+  h2 { margin: 32px 0 8px; font-size: 20px; color: #ffd43b; }
+  h3 { margin: 18px 0 6px; font-size: 17px; }
+  .lead { color: #dee2e6; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+  .tabs a { padding: 6px 16px; border: 1px solid #495057; border-radius: 999px; color: #e9ecef; text-decoration: none; }
+  .table { overflow-x: auto; margin: 10px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.6; }
+  th, td { padding: 8px 10px; border-bottom: 1px solid #2b2d3b; text-align: left; vertical-align: top; }
+  th { color: #adb5bd; font-weight: 600; white-space: nowrap; }
+  code { padding: 1px 5px; border-radius: 4px; background: #262838; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .92em; overflow-wrap: anywhere; }
+  pre { margin: 8px 0; padding: 10px 12px; border-radius: 8px; background: #262838; white-space: pre-wrap; overflow-wrap: anywhere; }
+  pre code { padding: 0; }
+  sup.cite { margin-left: 2px; font-size: 11px; line-height: 0; }
+  sup.cite a { text-decoration: none; }
+  .steps li, ul li { margin: 6px 0; }
+  .note { padding: 10px 14px; border-left: 3px solid #ffd43b; border-radius: 0 10px 10px 0; background: #1b1d29; color: #ced4da; }
+  .led { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 50%; vertical-align: 1px; border: 1px solid #868e96; }
+  .led.on, .led.blink, .led.slow { border-color: #40c057; background: #40c057; }
+  .led.red, .led.red-slow { border-color: #fa5252; background: #fa5252; }
+  .led.blink { animation: led 0.5s steps(2, jump-none) infinite; }
+  .led.slow, .led.red-slow { animation: led 2s steps(2, jump-none) infinite; }
+  @keyframes led { to { opacity: .15; } }
+  @media (prefers-reduced-motion: reduce) { .led { animation: none !important; } }
+  .screens { margin: 12px 0; }
+  .screens svg { display: block; width: 100%; max-width: 560px; height: auto; }
+  .screens .screen { fill: #1b1d29; stroke: #495057; stroke-width: 2; }
+  .screens text { fill: #dee2e6; font-size: 14px; }
+  .screens .title { fill: #ffd43b; font-weight: 700; }
+  .screens .tap { fill: none; stroke: #f06595; stroke-width: 2; }
+  .screens .arrow { fill: none; stroke: #adb5bd; stroke-width: 2; }
+  .screens figcaption { font-size: 12px; color: #868e96; }
+  .faq dt { margin-top: 12px; font-weight: 700; }
+  .faq dd { margin: 2px 0 0; color: #ced4da; }
+  .sources { padding-left: 1.6em; font-size: 14px; color: #adb5bd; overflow-wrap: anywhere; }
+  .sources li { margin: 4px 0; }
+  .checked { font-size: 13px; color: #868e96; }
+  .play { margin: 28px 0 10px; padding: 14px 16px; border-radius: 14px; background: #1b1d29; text-align: center; font-size: 17px; }
+  .play a { color: #ffa8c5; font-weight: 700; }
+  .more { font-size: 14px; color: #adb5bd; text-align: center; }
+  .more a { margin: 0 6px; }
+  footer { margin-top: 30px; color: #868e96; font-size: 13px; text-align: center; }
+  footer a { color: #adb5bd; }
+</style>
+</head>
+<body>
+<main>
+  <nav class="langs" aria-label="简体 / 繁體"><a href="./guangmao.html" hreflang="zh-Hans" lang="zh-Hans">简体</a><a href="./guangmao-hant.html" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">繁體</a></nav>
+  <p class="series">修網線百科</p>
+  <h1>光貓指示燈速查<small>LOS 亮紅燈、PON 一直閃是什麼意思，寬頻報修打哪個電話</small></h1>
+  <p class="lead">光貓就是連著一根黃色細光纖的那個盒子<sup class="cite"><a href="#src-cmcc">[1]</a></sup>。網斷了，先別急著折騰路由器：看一眼光貓上的燈，多半就知道問題出在哪一段。</p>
+
+  <h2 id="normal">正常的樣子</h2>
+  <p><span class="led on" aria-hidden="true"></span>POWER 常亮，<span class="led on" aria-hidden="true"></span>PON 常亮，<span class="led off" aria-hidden="true"></span>LOS 不亮：光貓和運營商那頭已經連上了<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-ont">[2]</a></sup>。這時候還上不了網，就往後查網線和路由器（見下面的「報修前先試三步」）。</p>
+
+  <h2 id="lights">每盞燈怎麼看</h2>
+  <div class="table"><table>
+    <thead><tr><th scope="col">燈</th><th scope="col">狀態</th><th scope="col">意思</th><th scope="col">怎麼辦</th></tr></thead>
+    <tbody>
+      <tr><td>POWER（電源）</td><td><span class="led on" aria-hidden="true"></span>常亮</td><td>通電了</td><td>—<sup class="cite"><a href="#src-ont">[2]</a></sup></td></tr>
+      <tr><td>POWER（電源）</td><td><span class="led off" aria-hidden="true"></span>不亮，別的燈也全滅</td><td>沒通電</td><td>看插頭、插座和光貓背後的電源開關<sup class="cite"><a href="#src-ont">[2]</a></sup></td></tr>
+      <tr><td>PON（註冊）</td><td><span class="led on" aria-hidden="true"></span>常亮，LOS 不亮</td><td>光貓和運營商的設備已經連上，正常</td><td>—<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-ont">[2]</a><a href="#src-onu">[3]</a></sup></td></tr>
+      <tr><td>PON（註冊）</td><td><span class="led blink" aria-hidden="true"></span>快閃（約一秒兩次），LOS 不亮</td><td>正在和運營商的設備建立連線</td><td>一直閃不停：查光纖有沒有彎折，捋順後再看，沒恢復就報修<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-onu">[3]</a></sup></td></tr>
+      <tr><td>LOS（光訊號）</td><td><span class="led off" aria-hidden="true"></span>不亮</td><td>光訊號正常</td><td>—<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-ont">[2]</a></sup></td></tr>
+      <tr><td>LOS（光訊號）</td><td><span class="led red-slow" aria-hidden="true"></span>紅燈慢閃（約兩秒一次），PON 不亮</td><td>沒接光纖，或者收不到光訊號</td><td>查黃色細光纖：兩頭插緊，彎折的地方捋順；沒恢復就報修<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-ont">[2]</a><a href="#src-onu">[3]</a></sup></td></tr>
+      <tr><td>LOS（光訊號）</td><td><span class="led red" aria-hidden="true"></span>亮紅燈</td><td>光訊號異常；有的型號同時 PON 不亮，表示光貓被運營商那頭停用或發光異常</td><td>先查光纖；沒恢復就報修<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-onu">[3]</a></sup></td></tr>
+      <tr><td>PON 和 LOS</td><td><span class="led slow" aria-hidden="true"></span><span class="led red-slow" aria-hidden="true"></span>兩盞一起慢閃</td><td>光貓硬體故障</td><td>報修<sup class="cite"><a href="#src-ont">[2]</a><a href="#src-onu">[3]</a></sup></td></tr>
+      <tr><td>PON 和 LOS</td><td><span class="led off" aria-hidden="true"></span><span class="led off" aria-hidden="true"></span>都不亮，電源燈亮著</td><td>有的型號表示光貓被運營商那頭停用</td><td>報修<sup class="cite"><a href="#src-ont">[2]</a></sup></td></tr>
+      <tr><td>LAN（網口）</td><td><span class="led on" aria-hidden="true"></span>常亮 / <span class="led blink" aria-hidden="true"></span>閃 / <span class="led off" aria-hidden="true"></span>不亮</td><td>網線連著 / 正在傳資料 / 沒連上</td><td>不亮就把網線兩頭插緊；電腦直連光貓時，中國移動的排障頁讓插 LAN1 口<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-ont">[2]</a><a href="#src-onu">[3]</a></sup></td></tr>
+      <tr><td>WLAN（光貓自帶的 Wi-Fi）</td><td><span class="led on" aria-hidden="true"></span>常亮 / <span class="led blink" aria-hidden="true"></span>閃 / <span class="led off" aria-hidden="true"></span>不亮</td><td>Wi-Fi 開著 / 正在傳資料 / Wi-Fi 關著</td><td>—<sup class="cite"><a href="#src-ont">[2]</a></sup></td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">不同型號的燈語不完全一樣：同樣是「被運營商那頭停用」，有的型號兩盞燈都滅，有的是 LOS 常亮。以光貓的說明書為準<sup class="cite"><a href="#src-ont">[2]</a><a href="#src-onu">[3]</a></sup>。</p>
+
+  <h2 id="first">報修前先試三步</h2>
+  <ol class="steps">
+    <li><b>看光纖。</b>黃色細光纖兩頭插緊，彎折的地方捋順；別把眼睛對著光口看<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-onu">[3]</a></sup>。</li>
+    <li><b>重啟光貓。</b>先斷電，再通電<sup class="cite"><a href="#src-onu">[3]</a></sup>；中國移動的排障頁建議斷電 5 分鐘再通電<sup class="cite"><a href="#src-cmcc">[1]</a></sup>。</li>
+    <li><b>繞過路由器。</b>用網線把電腦直接插到光貓的 LAN1 口，試試能不能上網<sup class="cite"><a href="#src-cmcc">[1]</a></sup>。</li>
+  </ol>
+  <p>三步都試過，燈還是不對，就打寬頻運營商的客服熱線報修<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-onu">[3]</a></sup>。打之前記下：哪盞燈、什麼顏色、常亮還是閃。</p>
+
+  <h2 id="call">寬頻報修電話</h2>
+  <div class="table"><table>
+    <thead><tr><th scope="col">寬頻是哪家的</th><th scope="col">客服熱線</th></tr></thead>
+    <tbody>
+      <tr><td>中國電信</td><td>10000<sup class="cite"><a href="#src-nrta">[4]</a><a href="#src-miit">[5]</a></sup></td></tr>
+      <tr><td>中國移動</td><td>10086<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-nrta">[4]</a><a href="#src-miit">[5]</a></sup></td></tr>
+      <tr><td>中國聯通</td><td>10010<sup class="cite"><a href="#src-nrta">[4]</a><a href="#src-miit">[5]</a></sup></td></tr>
+      <tr><td>中國廣電</td><td>10099<sup class="cite"><a href="#src-nrta">[4]</a></sup></td></tr>
+    </tbody>
+  </table></div>
+
+  <h2 id="faq">常見問題</h2>
+  <dl class="faq">
+    <dt>光貓 LOS 燈亮紅燈是什麼意思？</dt><dd>LOS 是光訊號燈，不亮才正常。亮紅燈或者紅燈慢閃，說明光貓收不到正常的光訊號：先把黃色細光纖兩頭插緊、彎折的地方捋順，再斷電重啟光貓；還是紅燈，就打運營商的客服熱線報修。<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-onu">[3]</a></sup></dd>
+    <dt>PON 燈一直閃是怎麼回事？</dt><dd>PON 燈快閃，表示光貓正在和運營商的設備建立連線，連上以後變成常亮。一直閃不停，先查光纖有沒有彎折，再重啟光貓，還不行就報修。<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-onu">[3]</a></sup></dd>
+    <dt>光貓的燈都正常，為什麼還是上不了網？</dt><dd>POWER、PON 常亮，LOS 不亮，說明光貓和運營商之間是通的。接著查網線是不是插在光貓的 LAN1 口；用了路由器的話，先用電腦直連光貓的 LAN1 口試試；還不行，把光貓斷電 5 分鐘再通電。<sup class="cite"><a href="#src-cmcc">[1]</a><a href="#src-ont">[2]</a></sup></dd>
+    <dt>寬頻報修打什麼電話？</dt><dd>打寬頻運營商的客服熱線：中國電信 10000，中國移動 10086，中國聯通 10010，中國廣電 10099。<sup class="cite"><a href="#src-nrta">[4]</a><a href="#src-miit">[5]</a></sup></dd>
+  </dl>
+
+  <h2 id="sources">資料來源</h2>
+  <ol class="sources">
+    <li id="src-cmcc"><a href="https://wx.10086.cn/xinjiang/activity_fault/template/cn/broadband_text/2.html">中國移動（新疆）寬頻自助排障：無錯誤程式碼的處理方式</a></li>
+    <li id="src-ont"><a href="https://support.huawei.com/enterprise/en/doc/EDOC1100216576/5626a622/indicator-description">Huawei EchoLife EG8145V5 Quick Start: Indicator Description（華為家用光貓說明書，英文）</a></li>
+    <li id="src-onu"><a href="https://support.huawei.com/enterprise/zh/doc/EDOC1100551869/31cf7c22">華為 P602P&amp;P802P 系列快速入門：指示燈說明</a></li>
+    <li id="src-nrta"><a href="https://www.nrta.gov.cn/art/2024/5/6/art_113_67376.html">國家廣播電視總局：公佈治理電視「套娃」收費和操作複雜工作投訴渠道（2024-05-06，列出廣電、電信、聯通、移動的客服熱線）</a></li>
+    <li id="src-miit"><a href="https://wap.miit.gov.cn/gzcy/cydh/art/2020/art_b8bb7aa47c684e97b188c31fb2dbe6de.html">工業和資訊化部：常用電話 · 電信使用者申訴</a></li>
+  </ol>
+  <p class="checked">以上資料均在 2026 年 11 月 27 日查閱。設備型號和韌體不同，介面和叫法會有出入，以機身標籤和說明書為準。</p>
+
+  <p class="play">遊戲裡，陸川也是從一盞紅燈開始的 → <a href="../?ref=wiki-guangmao&lang=zh-Hant">免費玩序章</a></p>
+  <nav class="more" aria-label="修網線百科">修網線百科：<a href="./router-login-hant.html">路由器後臺地址大全</a> · <a href="./wifi-password-hant.html">檢視已連線 Wi-Fi 的密碼</a></nav>
+  <footer>糟了！我只是來戀綜修網線的 · 畫面由 AI 生成 · 本作所有角色均為成年人，劇情純屬虛構 · <a href="../about.html#zh-hant">關於</a></footer>
+</main>
+
+</body>
+</html>

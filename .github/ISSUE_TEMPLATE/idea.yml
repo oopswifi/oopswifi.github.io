@@ -1,0 +1,18 @@
+name: "💡 建议 Idea"
+description: "想要的功能、剧情或者改进。 A feature, story or improvement you would like."
+title: "[建议] "
+labels:
+  - "enhancement"
+body:
+  - type: "markdown"
+    attributes:
+      value: |-
+        提问、聊天和晒结局，去玩家讨论区更合适。剧透请放进 `<details>` 里折叠。
+        Questions and chat fit the Discussions board better. Put spoilers inside `<details>`.
+  - type: "textarea"
+    id: "idea"
+    attributes:
+      label: "你的建议 Your idea"
+      description: "想要什么，为什么。 What you would like, and why."
+    validations:
+      required: true

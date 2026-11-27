@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💬 玩家讨论区 Discussions"
+    url: "https://github.com/oopswifi/oopswifi.github.io/discussions"
+    about: "提问、聊剧情、晒结局（剧透请折叠）。 Questions and talk about the game."
+  - name: "✉️ 邮件 Email"
+    url: "https://oopswifi.github.io/about.html#contact"
+    about: "购买、激活码和退款，请写信到 icodewoods@gmail.com，不要在这里公开。 Purchases, codes and refunds: email us, never post them here."

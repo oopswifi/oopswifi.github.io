@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-xZcngowLIMP8J2MMXxW6AaTwTRB55DIDGpQbABqIaRk='">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-xAcXhjuYS/YeS9qXV8F1lW6/k5DcSjOUQkT3IhwB7XU='">
 <title>修网线电台 · 糟了！我只是来恋综修网线的</title>
-    <meta name="description" content="「修网线电台」：《糟了！我只是来恋综修网线的》的游戏原声，在浏览器里实时合成的 8 首合成器 BGM，配一个 25 分钟番茄钟，写代码、自习的时候开着。点一下才出声。序章和第一集免费试玩。">
+    <meta name="description" content="「修网线电台」：《糟了！我只是来恋综修网线的》的游戏原声，在浏览器里实时合成的 8 首合成器 BGM，配一个 25 分钟番茄钟，写代码、自习的时候开着。点一下才出声。序章和第一集免费试玩。" itemprop="description">
     <link rel="canonical" href="https://oopswifi.github.io/ost.html">
     <link rel="alternate" hreflang="zh-Hans" href="https://oopswifi.github.io/ost.html">
     <link rel="alternate" hreflang="zh-Hant" href="https://oopswifi.github.io/ost-hant.html">
@@ -25,6 +25,8 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="糟了！我只是来恋综修网线的：五位女嘉宾的合照">
     <meta property="og:locale" content="zh_CN">
+    <meta itemprop="name" content="修网线电台 · 糟了！我只是来恋综修网线的">
+    <meta itemprop="image" content="https://oopswifi.github.io/og-cover.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="修网线电台 · 糟了！我只是来恋综修网线的">
     <meta name="twitter:description" content="「修网线电台」：《糟了！我只是来恋综修网线的》的游戏原声，在浏览器里实时合成的 8 首合成器 BGM，配一个 25 分钟番茄钟，写代码、自习的时候开着。点一下才出声。序章和第一集免费试玩。">
@@ -155,13 +157,14 @@ class AudioEngine {
   onEvent                                                       = null;
   /** Must be called from a user gesture (browser autoplay policy). */
   unlock() {
-    if (this.ctx) { if (document.visibilityState === 'visible') void this.ctx.resume(); return; }
+    if (this.ctx) { this.wake(); return; }
     const ctx = new AudioContext();
     this.ctx = ctx;
     document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'hidden') void ctx.suspend();
-      else void ctx.resume();
+      if (document.visibilityState === 'hidden') void ctx.suspend().catch(() => {});
+      else this.wake();
     });
+    for (const type of ['pointerdown', 'pointerup', 'touchend', 'keydown']) window.addEventListener(type, () => this.wake(), { capture: true, passive: true });
     this.master = ctx.createGain();
     this.master.gain.value = 0.9;
     const comp = ctx.createDynamicsCompressor();
@@ -186,6 +189,18 @@ class AudioEngine {
       this.bgmBus.gain.setTargetAtTime(bgm * 0.5, this.ctx.currentTime, 0.05);
       this.sfxBus.gain.setTargetAtTime(sfx, this.ctx.currentTime, 0.05);
     }
+    this.wake();
+  }
+  /**
+   * Restarts sound the browser suspended or interrupted while the page is visible: iOS Safari does after the player
+   * switched apps, locked the phone or took a call, and may only let a tap restart it (#546). Never while both volumes
+   * are 0: a player who muted the game starts no sound.
+   */
+          wake() {
+    const ctx = this.ctx;
+    if (!ctx || ctx.state === 'running' || ctx.state === 'closed' || document.visibilityState !== 'visible') return;
+    if (this.bgmVolume === 0 && this.sfxVolume === 0) return;
+    void ctx.resume().catch(() => {});
   }
   get currentMood() { return this.mood; }
   playBgm(mood      ) {

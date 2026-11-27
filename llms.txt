@@ -38,6 +38,12 @@ Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) i
 - [Mandarin reading practice](https://oopswifi.github.io/mandarin.html): 给学中文的成年人的阅读课：序章开场，拼音、英文和简繁 / a reading lesson for adult learners: the opening scene with pinyin, English, Simplified and Traditional
 - [「你，单身吗？」](https://oopswifi.github.io/choice.html): 序章里总导演的问题，不进游戏也能回答 / the director's question from the prologue, playable without the game
 - [「你，單身嗎？」（繁體中文）](https://oopswifi.github.io/choice-hant.html): 同一个问题的繁体中文版 / the same question in Traditional Chinese
+- [光猫指示灯速查（修网线百科）](https://oopswifi.github.io/wiki/guangmao.html): LOS 亮红灯、PON 闪烁是什么意思，宽带报修电话，每条附来源 / what the lights on a fibre modem mean and which hotline to call, with sources
+- [光貓指示燈速查（繁體中文）](https://oopswifi.github.io/wiki/guangmao-hant.html): 同一页的繁体中文版 / the same page in Traditional Chinese
+- [路由器后台地址大全（修网线百科）](https://oopswifi.github.io/wiki/router-login.html): 常见路由器的后台地址、后台打不开怎么办、三个该关掉的开关，每条附来源 / router admin addresses, what to check when the admin page will not open, three settings to turn off, with sources
+- [路由器後台位址大全（繁體中文）](https://oopswifi.github.io/wiki/router-login-hant.html): 同一页的繁体中文版 / the same page in Traditional Chinese
+- [查看已连接 Wi-Fi 的密码（修网线百科）](https://oopswifi.github.io/wiki/wifi-password.html): iPhone、安卓、Windows、Mac 的步骤，画成示意图，每步附官方来源 / see a saved Wi-Fi password on iPhone, Android, Windows and Mac, with sources
+- [查看已連線 Wi-Fi 的密碼（繁體中文）](https://oopswifi.github.io/wiki/wifi-password-hant.html): 同一页的繁体中文版 / the same page in Traditional Chinese
 
 ## 常见问题 FAQ
 

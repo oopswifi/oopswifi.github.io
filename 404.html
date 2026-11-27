@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-lrn40+o2X7mfI7g2D+qVlqrINavH1/BXCUnWWv7BrRo='">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-zlhwRxPTVICtvWPkMmTdm29+OSMYggjoSzJZ+4oynxQ='">
 <meta name="robots" content="noindex">
 <meta http-equiv="refresh" content="3;url=/?ref=lost">
 <title>404 · 网线被拔了 · 糟了！我只是来恋综修网线的</title>
@@ -15,6 +15,8 @@
   h1 { margin: 4px 0 10px; font-size: 26px; color: #c2255c; }
   p { margin: 0 0 22px; font-size: 17px; }
   .btn { display: inline-block; padding: 12px 26px; border-radius: 999px; font-size: 18px; font-weight: 700; text-decoration: none; background: #ff6b9d; color: #fff; }
+  .more { margin: 22px 0 0; font-size: 15px; }
+  .more a { color: #c2255c; }
 </style>
 </head>
 <body>
@@ -23,6 +25,7 @@
 <h1 data-hant="網線被拔了">网线被拔了</h1>
 <p data-hant="這個地址沒接上，正在把你送回片場……">这个地址没接上，正在把你送回片场……</p>
 <a id="go" class="btn" href="/?ref=lost" data-hant="回到免費試玩">回到免费试玩</a>
+<p class="more"><a href="https://github.com/oopswifi/oopswifi.github.io/discussions" data-hant="玩家討論區（GitHub Discussions）">玩家讨论区（GitHub Discussions）</a></p>
 </main>
 <script>function lostTarget(base, pages, pathname, search, hash) {
 	var p = pathname;
@@ -48,7 +51,7 @@
     }
     if (/^(zh|yue)\b/.test(l)) break;
   }
-  var to = lostTarget("/", ["about","press","trailer","guide","guide-hant","chat","chat-hant","plane","plane-hant","hr","hr-hant","ost","ost-hant","mandarin","choice","choice-hant","embed"], location.pathname, location.search, location.hash);
+  var to = lostTarget("/", ["about","press","trailer","guide","guide-hant","chat","chat-hant","plane","plane-hant","hr","hr-hant","ost","ost-hant","mandarin","choice","choice-hant","wiki/guangmao","wiki/guangmao-hant","wiki/router-login","wiki/router-login-hant","wiki/wifi-password","wiki/wifi-password-hant","embed"], location.pathname, location.search, location.hash);
   document.getElementById('go').href = to;
   setTimeout(function () { location.replace(to); }, 900);
 })();</script>

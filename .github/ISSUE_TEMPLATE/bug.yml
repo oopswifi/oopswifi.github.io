@@ -1,0 +1,57 @@
+name: "🐞 报告问题 Bug report"
+description: "游戏打不开、卡住、显示不对…… Something in the game is broken."
+title: "[问题] "
+labels:
+  - "bug"
+body:
+  - type: "markdown"
+    attributes:
+      value: |-
+        谢谢你来报告问题！中文、English 都可以。
+
+        **这一页所有人都看得到：不要贴激活码、邮箱或付款信息。** 买了没收到激活码，请写信到 icodewoods@gmail.com。
+        This page is public: never post an activation code, an email address or payment details here.
+  - type: "input"
+    id: "version"
+    attributes:
+      label: "游戏版本 Version"
+      description: "标题画面最下面一行开头的版本号。 The version at the start of the title screen's bottom line."
+      placeholder: "v0.10.0"
+  - type: "input"
+    id: "browser"
+    attributes:
+      label: "设备和浏览器 Device and browser"
+      description: "例如 iPhone 15 · Safari、Windows 11 · Edge、在微信里打开。 e.g. Android phone · Chrome."
+      placeholder: "iPhone 15 · Safari"
+    validations:
+      required: true
+  - type: "input"
+    id: "chapter"
+    attributes:
+      label: "在哪一章 Chapter"
+      description: "序章、第一集、第二集…… Where in the story it happened."
+      placeholder: "第一集"
+  - type: "input"
+    id: "summary"
+    attributes:
+      label: "一句话说说问题 Summary"
+      description: "One line about the problem."
+      placeholder: "点「继续游戏」以后画面一直是黑的"
+    validations:
+      required: true
+  - type: "textarea"
+    id: "steps"
+    attributes:
+      label: "发生了什么，怎么出现的 What happened, step by step"
+      description: "做了什么、看到了什么、本来应该怎样。截图可以直接贴进来，先遮住激活码。 What you did, what you saw and what you expected; screenshots welcome."
+      placeholder: |-
+        1.
+        2.
+        3.
+  - type: "checkboxes"
+    id: "no-code"
+    attributes:
+      label: "隐私 Privacy"
+      options:
+        - label: "我没有在这里贴激活码 I have not posted an activation code here"
+          required: true
