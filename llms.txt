@@ -22,6 +22,7 @@ Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) i
 ## 页面 Pages
 
 - [免费试玩 Play](https://oopswifi.github.io/): 游戏本身，序章和第一集免费 / the game; the prologue and episode 1 are free
+- [糟了！我只是來戀綜修網線的（繁體中文）](https://oopswifi.github.io/index-hant.html): 游戏首页的繁体中文版，从这里用繁体中文开始玩 / the game's front page in Traditional Chinese, which starts the game in Traditional
 - [关于与购买 About](https://oopswifi.github.io/about.html): 价格、交付、退款、隐私、联系方式和常见问题 / price, delivery, refunds, privacy, contact and FAQ
 - [About & buying (English)](https://oopswifi.github.io/about-en.html): 英文版的关于与购买 / the about page in English: price, delivery, refunds, privacy, contact and the AI disclosure
 - [媒体与主播资料 Press kit](https://oopswifi.github.io/press.html): 资料、直播和视频说明、AI 声明、封面和截图下载 / fact sheet, stream and video policy, AI disclosure, downloads
@@ -74,12 +75,12 @@ Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) i
 
 ### 可以直播或者做视频吗？
 
-欢迎直播、录视频、截图和做切片，包括带收益的视频，任何章节都可以。附上免费试玩链接就更好了；如果方便，请别在标题和封面里剧透隐藏路线。请勿转载或再分发游戏文件和剧本文字，也请勿公开激活码。游戏的音乐和音效都由程序实时合成，没有版权音乐，不会因为配乐被静音或下架。
+欢迎录视频、截图和做切片，包括带收益的视频，任何章节都可以；也欢迎在 YouTube、Twitch 等平台直播。本作没有版号，在中国大陆的直播平台开播前，请先看平台规则，很多平台不允许直播未经审批的游戏。附上免费试玩链接就更好了；如果方便，请别在标题和封面里剧透隐藏路线。请勿转载或再分发游戏文件和剧本文字，也请勿公开激活码。游戏的音乐和音效都由程序实时合成，没有版权音乐，不会因为配乐被静音或下架。
 
 ### 谁做的？怎么联系？
 
 独立开发者 iCodeWoods。邮箱：icodewoods@gmail.com。
 
-## Streams and videos
+## Videos and streams
 
-Videos, streams, screenshots and clips of any part of the game are welcome, monetised ones included, and a link to the free demo is appreciated (if you can, keep the hidden route out of titles and thumbnails). Please don't re-upload the game files or the script, or post activation codes. All music and sound effects are synthesized by the game itself: no licensed music, so no copyright mutes or claims.
+Videos, screenshots and clips of any part of the game are welcome, monetised ones included, and so are streams on platforms such as YouTube and Twitch. The game has no Chinese publishing licence: before streaming on a mainland-China platform, check its rules, as many don't allow unapproved games. A link to the free demo is appreciated (if you can, keep the hidden route out of titles and thumbnails). Please don't re-upload the game files or the script, or post activation codes. All music and sound effects are synthesized by the game itself: no licensed music, so no copyright mutes or claims.

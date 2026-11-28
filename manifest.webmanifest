@@ -25,5 +25,35 @@
       "sizes": "any",
       "type": "image/svg+xml"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/group_villa_ext_sunset-wide.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "五位女嘉宾在海边别墅前"
+    },
+    {
+      "src": "screenshots/nian_living_night_smug-wide.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "总导演顾念问：「你，单身吗？」"
+    },
+    {
+      "src": "screenshots/man_villa_ext_day_happy-narrow.jpg",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "女嘉宾唐小满"
+    },
+    {
+      "src": "screenshots/yan_villa_ext_day_smile-narrow.jpg",
+      "sizes": "720x1280",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "女嘉宾温言"
+    }
   ]
 }
