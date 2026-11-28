@@ -2,7 +2,7 @@
 
 > 《糟了！我只是来恋综修网线的》（Oops! I'm Just Here to Fix the Wi-Fi）是独立开发者 iCodeWoods 制作的网页互动恋爱喜剧（视觉小说），在手机或电脑的浏览器里直接玩，不用下载，也不用注册。被裁员的程序员去恋综片场修网线，结果被总导演抓去当了男嘉宾：5 位女嘉宾和一条隐藏路线，限时抉择，28 个结局。序章和第一集免费试玩；完整版激活码：约 ¥7（US$1），一次性购买（Payhip）。画面由 AI 生成，剧情和代码由开发者借助 AI 助手写成；所有角色均为成年人，本作含暧昧和亲密情节（泳装、吻戏），无裸露。网址：https://oopswifi.github.io/
 
-Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) is a Chinese-language interactive romantic comedy (visual novel) by the independent developer iCodeWoods, played in a phone or desktop web browser with no download or account. A laid-off programmer comes to fix the Wi-Fi on a dating show and is cast as its male contestant: 5 women and a hidden route, timed choices, 28 endings. The prologue and episode 1 are free; the full game is a one-time US$1 activation code (Payhip). The images are AI-generated; the story and code were written by the developer with an AI assistant. All characters are fictional adults. Contains romance scenes (swimwear, kissing); no nudity or sexual content. Website: https://oopswifi.github.io/
+Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) is an interactive romantic comedy (visual novel) by the independent developer iCodeWoods, in English, Simplified Chinese and Traditional Chinese, played in a phone or desktop web browser with no download or account. A laid-off programmer comes to fix the Wi-Fi on a dating show and is cast as its male contestant: 5 women and a hidden route, timed choices, 28 endings. The prologue and episode 1 are free; the full game is a one-time US$1 activation code (Payhip). The images are AI-generated; the story and code were written by the developer with an AI assistant. All characters are fictional adults. Contains romance scenes (swimwear, kissing); no nudity or sexual content. Website: https://oopswifi.github.io/
 
 ## 基本信息 Facts
 
@@ -10,7 +10,7 @@ Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) i
 - 开发者 Developer: iCodeWoods（独立开发者 / independent developer）
 - 类型 Genre: 第一人称真人风互动恋爱喜剧（视觉小说）/ interactive dating-show comedy (visual novel)
 - 平台 Platform: 网页浏览器，手机（横屏）或电脑，不用下载 / web browser, phone or desktop, no download
-- 语言 Language: 简体中文、繁體中文（游戏内切换），暂无英文 / Simplified and Traditional Chinese, no English yet
+- 语言 Language: 简体中文、繁體中文、English（游戏内切换）/ Simplified Chinese, Traditional Chinese and English (switch in game)
 - 价格 Price: 序章和第一集免费；完整版激活码：约 ¥7（US$1），一次性购买 / free demo; full game US$1, one-time
 - 内容 Content: 5 位女嘉宾和一条隐藏路线，28 个结局；本作含暧昧和亲密情节（泳装、吻戏），无裸露 / Contains romance scenes (swimwear, kissing); no nudity or sexual content.
 - AI: 画面由 AI 图像模型生成并经过修图；剧情和代码由开发者借助 AI 助手（GitHub Copilot）写成并审改；音乐和音效由游戏用程序实时合成，没有 AI 生成的声音。
@@ -70,7 +70,7 @@ Oops! I'm Just Here to Fix the Wi-Fi (糟了！我只是来恋综修网线的) i
 
 ### 有繁体中文或者英文吗？
 
-有繁体中文（台湾用语）：在标题画面的「简 / 繁」或「设置」里切换。目前没有英文版。
+都有：简体中文、繁体中文（台湾用语）和英文，在标题画面的「简 / 繁 / EN」或「设置」里切换。浏览器的语言里没有中文时，游戏用英文打开。
 
 ### 可以直播或者做视频吗？
 
