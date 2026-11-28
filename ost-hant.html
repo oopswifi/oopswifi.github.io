@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-VwWQEUE3cDuXRWN2dtAP9TbPHyt5fFg3cCzGKu6CpfI='">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; img-src 'self'; script-src 'sha256-Lx4bz821AHajbeHC4yYZEpAb3e4tCabcg0LA9CDwzk8='">
 <title>修網線電臺 · 糟了！我只是來戀綜修網線的</title>
     <meta name="description" content="「修網線電臺」：《糟了！我只是來戀綜修網線的》的遊戲原聲，在瀏覽器裡即時合成的 8 首合成器 BGM，配一個 25 分鐘番茄鐘，寫程式碼、自習的時候開著。點一下才出聲。序章和第一集免費試玩。" itemprop="description">
     <link rel="canonical" href="https://oopswifi.github.io/ost-hant.html">
@@ -145,6 +145,10 @@ class AudioEngine {
           master           ;
           bgmBus           ;
           sfxBus           ;
+  /** Recordings of spoken lines (src/engine/voice.ts, #869). */
+          voiceBus           ;
+  /** Between the music and the master: the music dips while someone speaks. */
+          bgmDuck           ;
           noise              ;
           mood       = 'none';
           moodGain                  = null;
@@ -153,6 +157,8 @@ class AudioEngine {
           timer                = null;
           bgmVolume = 0.55;
           sfxVolume = 0.8;
+  /** 0 while 角色配音 is off. */
+          voiceVolume = 0;
   /** Test hook: told about every music change and every sound effect played (scripts/promo-video.mjs). */
   onEvent                                                       = null;
   /** Must be called from a user gesture (browser autoplay policy). */
@@ -169,12 +175,17 @@ class AudioEngine {
     this.master.gain.value = 0.9;
     const comp = ctx.createDynamicsCompressor();
     this.master.connect(comp).connect(ctx.destination);
+    this.bgmDuck = ctx.createGain();
+    this.bgmDuck.connect(this.master);
     this.bgmBus = ctx.createGain();
     this.bgmBus.gain.value = this.bgmVolume * 0.5;
-    this.bgmBus.connect(this.master);
+    this.bgmBus.connect(this.bgmDuck);
     this.sfxBus = ctx.createGain();
     this.sfxBus.gain.value = this.sfxVolume;
     this.sfxBus.connect(this.master);
+    this.voiceBus = ctx.createGain();
+    this.voiceBus.gain.value = this.voiceVolume;
+    this.voiceBus.connect(this.master);
     this.noise = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
     const d = this.noise.getChannelData(0);
     for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
@@ -182,24 +193,35 @@ class AudioEngine {
     this.mood = 'none';
     if (pending !== 'none') this.playBgm(pending);
   }
-  setVolumes(bgm        , sfx        ) {
+  /** `voice`: the volume of the spoken lines' recordings, 0 while 角色配音 is off. */
+  setVolumes(bgm        , sfx        , voice = this.voiceVolume) {
     this.bgmVolume = bgm;
     this.sfxVolume = sfx;
+    this.voiceVolume = voice;
     if (this.ctx) {
       this.bgmBus.gain.setTargetAtTime(bgm * 0.5, this.ctx.currentTime, 0.05);
       this.sfxBus.gain.setTargetAtTime(sfx, this.ctx.currentTime, 0.05);
+      this.voiceBus.gain.setTargetAtTime(voice, this.ctx.currentTime, 0.05);
     }
     this.wake();
   }
+  /** Where a spoken line's recording plays (src/engine/voice.ts); null before the first tap or key. */
+  get voiceOut()                   {
+    return this.ctx ? this.voiceBus : null;
+  }
+  /** The music dips while someone speaks, and comes back after. */
+  duckMusic(on         ) {
+    if (this.ctx) this.bgmDuck.gain.setTargetAtTime(on ? 0.4 : 1, this.ctx.currentTime, on ? 0.08 : 0.35);
+  }
   /**
    * Restarts sound the browser suspended or interrupted while the page is visible: iOS Safari does after the player
-   * switched apps, locked the phone or took a call, and may only let a tap restart it (#546). Never while both volumes
-   * are 0: a player who muted the game starts no sound.
+   * switched apps, locked the phone or took a call, and may only let a tap restart it (#546). Never while every volume
+   * is 0: a player who muted the game starts no sound.
    */
           wake() {
     const ctx = this.ctx;
     if (!ctx || ctx.state === 'running' || ctx.state === 'closed' || document.visibilityState !== 'visible') return;
-    if (this.bgmVolume === 0 && this.sfxVolume === 0) return;
+    if (this.bgmVolume === 0 && this.sfxVolume === 0 && this.voiceVolume === 0) return;
     void ctx.resume().catch(() => {});
   }
   get currentMood() { return this.mood; }

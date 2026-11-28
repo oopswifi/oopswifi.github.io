@@ -16,7 +16,7 @@ body:
     attributes:
       label: "游戏版本 Version"
       description: "标题画面最下面一行开头的版本号。 The version at the start of the title screen's bottom line."
-      placeholder: "v0.16.2"
+      placeholder: "v0.17.0"
   - type: "input"
     id: "browser"
     attributes:
